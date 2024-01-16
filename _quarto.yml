@@ -5,7 +5,7 @@ project:
 execute: 
   warning: FALSE
   message: FALSE
-  cache: FALSE
+  cache: TRUE
 
 comments:
   hypothesis: 
@@ -30,6 +30,8 @@ format:
     code-tools: true
     code-overflow: wrap
     number-depth: 4
+    fig-width: 8
+    fig-height: 8
 
   pdf:
     documentclass: scrreprt

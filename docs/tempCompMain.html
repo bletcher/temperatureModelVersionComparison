@@ -201,7 +201,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 <p>Libraries</p>
-<div class="cell">
+<div class="cell" data-hash="tempCompMain_cache/html/unnamed-chunk-1_131f35bd3a2819d5d8b9e3310e7b6294">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(getPrepareWBData)</span>
@@ -210,7 +210,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="load-data" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="load-data"><span class="header-section-number">1.1</span> Load data</h2>
-<div class="cell">
+<div class="cell" data-hash="tempCompMain_cache/html/loadData_40c6e801e554a818d869195eaada2f38">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>d13 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'C:/Users/bletcher/OneDrive - DOI/projects/temperatureModelVersionComparison/data/in/sheds-temp-model-v1.4.0-20231208/sheds-temp-model-v1.3.0.csv'</span>)</span>
@@ -221,7 +221,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>catchHucs <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'C:/Users/bletcher/OneDrive - DOI/projects/temperatureModelVersionComparison/data/in/sheds-temp-model-v1.4.0-20231208/catchments-hucs.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div class="cell">
+<div class="cell" data-hash="tempCompMain_cache/html/combineData_670f9fdef36dc1d2e593b713700a5e51">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>d13 <span class="ot">&lt;-</span> d13 <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">ver =</span> <span class="dv">3</span>)</span>
@@ -231,7 +231,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(catchHucs, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"featureid"</span> <span class="ot">=</span> <span class="st">"catchment_id"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div class="cell">
+<div class="cell" data-hash="tempCompMain_cache/html/filterAndWide_64b5cc363065b30c342f6c2e7b3c4f5e">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>neversinkHUCs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'202980087'</span>, <span class="st">'202973988'</span>, <span class="st">'202974513'</span>, <span class="st">'202974973'</span>, <span class="st">'202976522'</span>)</span>
@@ -249,7 +249,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 <p>Plot functions</p>
-<div class="cell">
+<div class="cell" data-hash="tempCompMain_cache/html/plotFunctions_ae2e33117f39cc9af413c67228a0ed33">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>plotAll <span class="ot">&lt;-</span> <span class="cf">function</span>(d,x,y) {</span>
@@ -271,71 +271,71 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 <p>Mean July temperature</p>
-<div class="cell">
+<div class="cell" data-hash="tempCompMain_cache/html/july_f9bfb2e79cab204b268b81d21390c801">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2Wide, <span class="st">"mean_jul_temp_3"</span>, <span class="st">"mean_jul_temp_4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="tempCompMain_files/figure-html/july-1.png" class="img-fluid" width="672"></p>
+<p><img src="tempCompMain_files/figure-html/july-1.png" class="img-fluid" width="768"></p>
 </div>
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2Wide, <span class="st">"mean_jul_temp_3"</span>, <span class="st">"mean_jul_temp_4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="tempCompMain_files/figure-html/july-2.png" class="img-fluid" width="672"></p>
+<p><img src="tempCompMain_files/figure-html/july-2.png" class="img-fluid" width="768"></p>
 </div>
 </div>
 <p>Mean August temperature</p>
-<div class="cell">
+<div class="cell" data-hash="tempCompMain_cache/html/aug_383cdfbddfe859dd26e48a966aa4c2fc">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2Wide, <span class="st">"mean_aug_temp_3"</span>, <span class="st">"mean_aug_temp_4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="tempCompMain_files/figure-html/aug-1.png" class="img-fluid" width="672"></p>
+<p><img src="tempCompMain_files/figure-html/aug-1.png" class="img-fluid" width="768"></p>
 </div>
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2Wide, <span class="st">"mean_aug_temp_3"</span>, <span class="st">"mean_aug_temp_4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="tempCompMain_files/figure-html/aug-2.png" class="img-fluid" width="672"></p>
+<p><img src="tempCompMain_files/figure-html/aug-2.png" class="img-fluid" width="768"></p>
 </div>
 </div>
 <p>Mean Summer temperature</p>
-<div class="cell">
+<div class="cell" data-hash="tempCompMain_cache/html/summer_2f0446904ef9ac057497e6707de825af">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2Wide, <span class="st">"mean_summer_temp_3"</span>, <span class="st">"mean_summer_temp_4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="tempCompMain_files/figure-html/summer-1.png" class="img-fluid" width="672"></p>
+<p><img src="tempCompMain_files/figure-html/summer-1.png" class="img-fluid" width="768"></p>
 </div>
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2Wide, <span class="st">"mean_summer_temp_3"</span>, <span class="st">"mean_summer_temp_4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="tempCompMain_files/figure-html/summer-2.png" class="img-fluid" width="672"></p>
+<p><img src="tempCompMain_files/figure-html/summer-2.png" class="img-fluid" width="768"></p>
 </div>
 </div>
 <p>Mean maximum temperature</p>
-<div class="cell">
+<div class="cell" data-hash="tempCompMain_cache/html/max_7203618a8494f908a06c8b1ca93027c5">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2Wide, <span class="st">"mean_max_temp_3"</span>, <span class="st">"mean_max_temp_4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="tempCompMain_files/figure-html/max-1.png" class="img-fluid" width="672"></p>
+<p><img src="tempCompMain_files/figure-html/max-1.png" class="img-fluid" width="768"></p>
 </div>
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2Wide, <span class="st">"mean_max_temp_3"</span>, <span class="st">"mean_max_temp_4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="tempCompMain_files/figure-html/max-2.png" class="img-fluid" width="672"></p>
+<p><img src="tempCompMain_files/figure-html/max-2.png" class="img-fluid" width="768"></p>
 </div>
 </div>
 
