@@ -1,0 +1,38 @@
+project:
+  type: book
+  output-dir: docs
+
+execute: 
+  warning: FALSE
+  message: FALSE
+  cache: FALSE
+
+comments:
+  hypothesis: 
+    theme: clean
+
+book:
+  title: "Temperature model version comparison"
+  author: "Ben Letcher"
+  date: today
+  chapters:
+    - index.qmd
+    - part: "Comparison"
+      chapters:
+        - tempCompMain.qmd
+
+format:
+  html:
+    theme: 
+      light: cosmo
+      dark: darkly
+    code-fold: true
+    code-tools: true
+    code-overflow: wrap
+    number-depth: 4
+
+  pdf:
+    documentclass: scrreprt
+
+editor: source
+
