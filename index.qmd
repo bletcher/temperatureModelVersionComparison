@@ -1,1 +1,3 @@
 # Introduction {.unnumbered}
+
+The EcoHSEDS temperature model gets updated approximately annually as new data are submitted to the [database](https://db.ecosheds.org/). Each update produces a new [version](https://ecosheds.github.io/northeast-temp-model/index.html#model-versioning). Here we examine changes in predictions between version 1.3 (Sept 2021) and version 1.4 (Jan 2024). In particulare we, focus on 2 areas with significant increases in data between versions, the Neversink in NY and the Potomac in Virginia.
