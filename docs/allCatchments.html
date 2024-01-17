@@ -248,12 +248,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 <p>Plot functions</p>
-<div class="cell" data-hash="allCatchments_cache/html/plotFunctionsAll_622fe5dbb796ede0fe5a7790c1dcd151">
+<div class="cell" data-hash="allCatchments_cache/html/plotFunctionsAll_1b903a29df62f4c1a48ed3d366648d09">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>plotAll <span class="ot">&lt;-</span> <span class="cf">function</span>(d,x,y,huc) {</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(d, <span class="fu">aes</span>(<span class="fu">get</span>(x), <span class="fu">get</span>(y), <span class="at">color =</span> <span class="fu">factor</span>(<span class="fu">get</span>(huc)))) <span class="sc">+</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.1</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(d, <span class="fu">aes</span>(<span class="fu">get</span>(x), <span class="fu">get</span>(y), <span class="at">color =</span> (<span class="fu">get</span>(huc)))) <span class="sc">+</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.05</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="dv">0</span>, <span class="at">slope =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> x, <span class="at">y =</span> y) <span class="sc">+</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_publication</span>()</span>
@@ -350,7 +350,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="huc10" class="level3" data-number="2.3.3">
 <h3 data-number="2.3.3" class="anchored" data-anchor-id="huc10"><span class="header-section-number">2.3.3</span> HUC10</h3>
-<div class="cell" data-hash="allCatchments_cache/html/summer10All_e152b777a457283320048b91a8e2033a">
+<div class="cell" data-hash="allCatchments_cache/html/summer10All_2091547ea3c73168b9df536ecbbe6234">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(dWide, <span class="st">"mean_summer_temp_3"</span>, <span class="st">"mean_summer_temp_4"</span>,<span class="st">"huc10"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -360,11 +360,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(dWide, <span class="st">"mean_summer_temp_3"</span>, <span class="st">"mean_summer_temp_4"</span>, <span class="st">"huc10"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">#plotByHUC(dWide, "mean_summer_temp_3", "mean_summer_temp_4", "huc10")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output-display">
-<p><img src="allCatchments_files/figure-html/summer10All-2.png" class="img-fluid" width="768"></p>
-</div>
 </div>
 </section>
 </section>
@@ -818,8 +815,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: plotFunctionsAll</span></span>
 <span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>plotAll <span class="ot">&lt;-</span> <span class="cf">function</span>(d,x,y,huc) {</span>
-<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(d, <span class="fu">aes</span>(<span class="fu">get</span>(x), <span class="fu">get</span>(y), <span class="at">color =</span> <span class="fu">factor</span>(<span class="fu">get</span>(huc)))) <span class="sc">+</span></span>
-<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.1</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(d, <span class="fu">aes</span>(<span class="fu">get</span>(x), <span class="fu">get</span>(y), <span class="at">color =</span> (<span class="fu">get</span>(huc)))) <span class="sc">+</span></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.05</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
 <span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="dv">0</span>, <span class="at">slope =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
 <span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> x, <span class="at">y =</span> y) <span class="sc">+</span></span>
 <span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_publication</span>()</span>
@@ -882,7 +879,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb15-88"><a href="#cb15-88" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: summer10All</span></span>
 <span id="cb15-89"><a href="#cb15-89" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-90"><a href="#cb15-90" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(dWide, <span class="st">"mean_summer_temp_3"</span>, <span class="st">"mean_summer_temp_4"</span>,<span class="st">"huc10"</span>)</span>
-<span id="cb15-91"><a href="#cb15-91" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(dWide, <span class="st">"mean_summer_temp_3"</span>, <span class="st">"mean_summer_temp_4"</span>, <span class="st">"huc10"</span>)</span>
+<span id="cb15-91"><a href="#cb15-91" aria-hidden="true" tabindex="-1"></a><span class="co">#plotByHUC(dWide, "mean_summer_temp_3", "mean_summer_temp_4", "huc10")</span></span>
 <span id="cb15-92"><a href="#cb15-92" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-93"><a href="#cb15-93" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb15-94"><a href="#cb15-94" aria-hidden="true" tabindex="-1"></a></span>

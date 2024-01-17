@@ -39,7 +39,7 @@
     "href": "allCatchments.html#mean-summer-temperature",
     "title": "2  All rivers",
     "section": "2.3 Mean Summer temperature",
-    "text": "2.3 Mean Summer temperature\n\n2.3.1 HUC6\n\n\nCode\nplotAll(dWide, \"mean_summer_temp_3\", \"mean_summer_temp_4\",\"huc6\")\n\n\n\n\n\nCode\nplotByHUC(dWide, \"mean_summer_temp_3\", \"mean_summer_temp_4\", \"huc6\")\n\n\n\n\n\n\n\n2.3.2 HUC8\n\n\nCode\nplotAll(dWide, \"mean_summer_temp_3\", \"mean_summer_temp_4\",\"huc8\")\n\n\n\n\n\nCode\nplotByHUC(dWide, \"mean_summer_temp_3\", \"mean_summer_temp_4\", \"huc8\")\n\n\n\n\n\n\n\n2.3.3 HUC10\n\n\nCode\nplotAll(dWide, \"mean_summer_temp_3\", \"mean_summer_temp_4\",\"huc10\")\n\n\n\n\n\nCode\nplotByHUC(dWide, \"mean_summer_temp_3\", \"mean_summer_temp_4\", \"huc10\")"
+    "text": "2.3 Mean Summer temperature\n\n2.3.1 HUC6\n\n\nCode\nplotAll(dWide, \"mean_summer_temp_3\", \"mean_summer_temp_4\",\"huc6\")\n\n\n\n\n\nCode\nplotByHUC(dWide, \"mean_summer_temp_3\", \"mean_summer_temp_4\", \"huc6\")\n\n\n\n\n\n\n\n2.3.2 HUC8\n\n\nCode\nplotAll(dWide, \"mean_summer_temp_3\", \"mean_summer_temp_4\",\"huc8\")\n\n\n\n\n\nCode\nplotByHUC(dWide, \"mean_summer_temp_3\", \"mean_summer_temp_4\", \"huc8\")\n\n\n\n\n\n\n\n2.3.3 HUC10\n\n\nCode\nplotAll(dWide, \"mean_summer_temp_3\", \"mean_summer_temp_4\",\"huc10\")\n\n\n\n\n\nCode\n#plotByHUC(dWide, \"mean_summer_temp_3\", \"mean_summer_temp_4\", \"huc10\")"
   },
   {
     "objectID": "allCatchments.html#mean-maximum-temperature",
