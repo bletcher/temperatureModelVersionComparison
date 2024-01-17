@@ -85,9 +85,9 @@ plotByHUC <- function(d,x,y) {
 
 ```
 
-## Potomac  
+# Potomac  
 Plot version 3 (x-axis) against version 4 (y-axis) for several summer temperature variables.  
-### Mean July temperature
+## Mean July temperature
 ```{r}
 #| label: july
 
@@ -97,7 +97,7 @@ plotByHUC(d2WideP, "mean_jul_temp_3", "mean_jul_temp_4")
 
 ```
 
-### Mean August temperature
+## Mean August temperature
 ```{r}
 #| label: aug
 
@@ -107,7 +107,7 @@ plotByHUC(d2WideP, "mean_aug_temp_3", "mean_aug_temp_4")
 
 ```
 
-### Mean Summer temperature
+## Mean Summer temperature
 ```{r}
 #| label: summer
 
@@ -117,7 +117,7 @@ plotByHUC(d2WideP, "mean_summer_temp_3", "mean_summer_temp_4")
 
 ```
 
-### Mean maximum temperature
+## Mean maximum temperature
 ```{r}
 #| label: max
 
@@ -127,9 +127,9 @@ plotByHUC(d2WideP, "mean_max_temp_3", "mean_max_temp_4")
 
 ```
 
-## Neversink  
+# Neversink  
 Plot version 3 (x-axis) against version 4 (y-axis) for several summer temperature variables.  
-### Mean July temperature
+## Mean July temperature
 ```{r}
 #| label: julyN
 
@@ -139,7 +139,7 @@ plotByHUC(d2WideN, "mean_jul_temp_3", "mean_jul_temp_4")
 
 ```
 
-### Mean August temperature
+## Mean August temperature
 ```{r}
 #| label: augN
 
@@ -149,7 +149,7 @@ plotByHUC(d2WideN, "mean_aug_temp_3", "mean_aug_temp_4")
 
 ```
 
-### Mean Summer temperature
+## Mean Summer temperature
 ```{r}
 #| label: summerN
 
@@ -159,7 +159,7 @@ plotByHUC(d2WideN, "mean_summer_temp_3", "mean_summer_temp_4")
 
 ```
 
-### Mean maximum temperature
+## Mean maximum temperature
 ```{r}
 #| label: maxN
 
