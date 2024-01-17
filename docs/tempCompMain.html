@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Temperature model version comparison - 1&nbsp; Load data</title>
+<title>Temperature model version comparison - 1&nbsp; Get data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -116,7 +116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./tempCompMain.html">Compare versions</a></li><li class="breadcrumb-item"><a href="./tempCompMain.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Load data</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./tempCompMain.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Get data</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -150,21 +150,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tempCompMain.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Get data</span></span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
- <span class="menu-text">Compare versions</span></a>
+ <span class="menu-text">Two watersheds</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./tempCompMain.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Load data</span></span></a>
-  </div>
-</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./potomac.html" class="sidebar-item-text sidebar-link">
@@ -185,14 +185,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#combine-versions" id="toc-combine-versions" class="nav-link active" data-scroll-target="#combine-versions"><span class="header-section-number">1.0.1</span> Combine versions</a></li>
+  <li><a href="#filter-and-widen" id="toc-filter-and-widen" class="nav-link" data-scroll-target="#filter-and-widen"><span class="header-section-number">1.0.2</span> Filter and widen</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Load data</span></h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Get data</span></h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
 </div>
 
 
@@ -207,7 +214,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p>Libraries</p>
 <div class="cell" data-hash="tempCompMain_cache/html/libraries_2fd29a0916f44c744521c34c5871df68">
 <details>
 <summary>Code</summary>
@@ -215,17 +221,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div class="cell" data-hash="tempCompMain_cache/html/loadData_40c6e801e554a818d869195eaada2f38">
+<div class="cell" data-hash="tempCompMain_cache/html/loadData_d9b5d3fee6c31e1bb9392fe5f78bf145">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>d13 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'C:/Users/bletcher/OneDrive - DOI/projects/temperatureModelVersionComparison/data/in/sheds-temp-model-v1.4.0-20231208/sheds-temp-model-v1.3.0.csv'</span>)</span>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>d13 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'C:/Users/bletcher/OneDrive - DOI/projects/temperatureModelVersionComparison/data/in/sheds-temp-model-v1.3.0-20240116/sheds-temp-model-v1.3.0.csv'</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>d14 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'C:/Users/bletcher/OneDrive - DOI/projects/temperatureModelVersionComparison/data/in/sheds-temp-model-v1.4.0-20231208/sheds-temp-model-v1.4.0.csv'</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>d14 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'C:/Users/bletcher/OneDrive - DOI/projects/temperatureModelVersionComparison/data/in/sheds-temp-model-v1.4.0-20240116/sheds-temp-model-v1.4.0.csv'</span>)</span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>catchHucs <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'C:/Users/bletcher/OneDrive - DOI/projects/temperatureModelVersionComparison/data/in/sheds-temp-model-v1.4.0-20231208/catchments-hucs.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>catchHucs <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'C:/Users/bletcher/OneDrive - DOI/projects/temperatureModelVersionComparison/data/in/sheds-temp-model-v1.4.0-20240116/catchments-hucs.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
+<section id="combine-versions" class="level3" data-number="1.0.1">
+<h3 data-number="1.0.1" class="anchored" data-anchor-id="combine-versions"><span class="header-section-number">1.0.1</span> Combine versions</h3>
 <div class="cell" data-hash="tempCompMain_cache/html/combineData_670f9fdef36dc1d2e593b713700a5e51">
 <details>
 <summary>Code</summary>
@@ -236,6 +244,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(catchHucs, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"featureid"</span> <span class="ot">=</span> <span class="st">"catchment_id"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
+</section>
+<section id="filter-and-widen" class="level3" data-number="1.0.2">
+<h3 data-number="1.0.2" class="anchored" data-anchor-id="filter-and-widen"><span class="header-section-number">1.0.2</span> Filter and widen</h3>
 <div class="cell" data-hash="tempCompMain_cache/html/filterAndWide_51b0ef7280f612dfc6509a1ac3b4f1f9">
 <details>
 <summary>Code</summary>
@@ -274,6 +285,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <!-- -->
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -687,72 +699,73 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb5" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>Libraries</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: libraries</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co">#| </span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(getPrepareWBData) <span class="co"># for theme_publication()</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="fu">## Load data</span></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: loadData</span></span>
+<div class="sourceCode" id="cb5" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: libraries</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| </span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(getPrepareWBData) <span class="co"># for theme_publication()</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Get data</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: loadData</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>d13 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'C:/Users/bletcher/OneDrive - DOI/projects/temperatureModelVersionComparison/data/in/sheds-temp-model-v1.3.0-20240116/sheds-temp-model-v1.3.0.csv'</span>)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>d13 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'C:/Users/bletcher/OneDrive - DOI/projects/temperatureModelVersionComparison/data/in/sheds-temp-model-v1.4.0-20231208/sheds-temp-model-v1.3.0.csv'</span>)</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>d14 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'C:/Users/bletcher/OneDrive - DOI/projects/temperatureModelVersionComparison/data/in/sheds-temp-model-v1.4.0-20240116/sheds-temp-model-v1.4.0.csv'</span>)</span>
 <span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>d14 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'C:/Users/bletcher/OneDrive - DOI/projects/temperatureModelVersionComparison/data/in/sheds-temp-model-v1.4.0-20231208/sheds-temp-model-v1.4.0.csv'</span>)</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>catchHucs <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'C:/Users/bletcher/OneDrive - DOI/projects/temperatureModelVersionComparison/data/in/sheds-temp-model-v1.4.0-20240116/catchments-hucs.csv'</span>)</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>catchHucs <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'C:/Users/bletcher/OneDrive - DOI/projects/temperatureModelVersionComparison/data/in/sheds-temp-model-v1.4.0-20231208/catchments-hucs.csv'</span>)</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: combineData </span></span>
-<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a><span class="co">#| </span></span>
-<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>d13 <span class="ot">&lt;-</span> d13 <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">ver =</span> <span class="dv">3</span>)</span>
-<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>d14 <span class="ot">&lt;-</span> d14 <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">ver =</span> <span class="dv">4</span>)</span>
-<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(d13, d14) <span class="sc">|&gt;</span> </span>
-<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(catchHucs, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"featureid"</span> <span class="ot">=</span> <span class="st">"catchment_id"</span>))</span>
-<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: filterAndWide</span></span>
-<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>potomacHUCs <span class="ot">&lt;-</span> <span class="fu">unique</span>(<span class="fu">c</span>(<span class="st">'20700041009'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041004'</span>,<span class="st">'20700040202'</span>,<span class="st">'20700040203'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041005'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041004'</span>,<span class="st">'20700041004'</span>,<span class="st">'20700040205'</span>,<span class="st">'20700040202'</span>,<span class="st">'20700040201'</span>,<span class="st">'20700070301'</span>,<span class="st">'20700070203'</span>,<span class="st">'20700030706'</span>,<span class="st">'20700040908'</span>,<span class="st">'20700040908'</span>,<span class="st">'20700041106'</span>,<span class="st">'20700041106'</span>,<span class="st">'20700040904'</span>,<span class="st">'20700040904'</span>,<span class="st">'20700040903'</span>,<span class="st">'20700040404'</span>,<span class="st">'20700040907'</span>,<span class="st">'20700040202'</span>,<span class="st">'20700030704'</span>,<span class="st">'20700070301'</span>,<span class="st">'20700070302'</span>,<span class="st">'20700070303'</span>,<span class="st">'20700070202'</span>,<span class="st">'20700040906'</span>,<span class="st">'20700040407'</span>,<span class="st">'20700040906'</span>,<span class="st">'20700041107'</span>,<span class="st">'20700041104'</span>,<span class="st">'20700040204'</span>,<span class="st">'20700041105'</span>,<span class="st">'20700040907'</span>,<span class="st">'20700040202'</span>,<span class="st">'20700030704'</span>,<span class="st">'20700041008'</span>,<span class="st">'20700041008'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041004'</span>,<span class="st">'20700041006'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700040202'</span>,<span class="st">'20700040203'</span>,<span class="st">'20700040201'</span>,<span class="st">'20700040202'</span>,<span class="st">'20700040201'</span></span>
-<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>))</span>
-<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>d2P <span class="ot">&lt;-</span> d <span class="sc">|&gt;</span> </span>
-<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(huc12 <span class="sc">%in%</span> <span class="fu">as.numeric</span>((<span class="fu">c</span>(potomacHUCs))))</span>
-<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>d2WideP <span class="ot">&lt;-</span> d2P <span class="sc">|&gt;</span> </span>
-<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(ver, featureid, huc12, mean_jul_temp, mean_aug_temp, mean_summer_temp, mean_max_temp) <span class="sc">|&gt;</span> </span>
-<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> ver, <span class="at">values_from =</span> <span class="fu">c</span>(mean_jul_temp, mean_aug_temp, mean_summer_temp, mean_max_temp))</span>
-<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(<span class="at">x =</span> d2WideP, <span class="at">file =</span> <span class="st">'./data/d2WideP.RData'</span>)</span>
-<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a><span class="co"># C:\Users\bletcher\OneDrive - DOI\projects\temperatureModelVersionComparison\data\in\sheds-temp-model-v1.4.0-20240116/db-locations</span></span>
-<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a><span class="co"># search for USGS_NEVERSINK</span></span>
-<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a>neversinkHUCs <span class="ot">&lt;-</span> <span class="fu">unique</span>(<span class="fu">c</span>(</span>
-<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a><span class="st">"20401040303"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040303"</span></span>
-<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>))</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="fu">### Combine versions  </span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: combineData </span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a><span class="co">#| </span></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>d13 <span class="ot">&lt;-</span> d13 <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">ver =</span> <span class="dv">3</span>)</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>d14 <span class="ot">&lt;-</span> d14 <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">ver =</span> <span class="dv">4</span>)</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(d13, d14) <span class="sc">|&gt;</span> </span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(catchHucs, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"featureid"</span> <span class="ot">=</span> <span class="st">"catchment_id"</span>))</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a><span class="fu">### Filter and widen</span></span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: filterAndWide</span></span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>potomacHUCs <span class="ot">&lt;-</span> <span class="fu">unique</span>(<span class="fu">c</span>(<span class="st">'20700041009'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041004'</span>,<span class="st">'20700040202'</span>,<span class="st">'20700040203'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041005'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041004'</span>,<span class="st">'20700041004'</span>,<span class="st">'20700040205'</span>,<span class="st">'20700040202'</span>,<span class="st">'20700040201'</span>,<span class="st">'20700070301'</span>,<span class="st">'20700070203'</span>,<span class="st">'20700030706'</span>,<span class="st">'20700040908'</span>,<span class="st">'20700040908'</span>,<span class="st">'20700041106'</span>,<span class="st">'20700041106'</span>,<span class="st">'20700040904'</span>,<span class="st">'20700040904'</span>,<span class="st">'20700040903'</span>,<span class="st">'20700040404'</span>,<span class="st">'20700040907'</span>,<span class="st">'20700040202'</span>,<span class="st">'20700030704'</span>,<span class="st">'20700070301'</span>,<span class="st">'20700070302'</span>,<span class="st">'20700070303'</span>,<span class="st">'20700070202'</span>,<span class="st">'20700040906'</span>,<span class="st">'20700040407'</span>,<span class="st">'20700040906'</span>,<span class="st">'20700041107'</span>,<span class="st">'20700041104'</span>,<span class="st">'20700040204'</span>,<span class="st">'20700041105'</span>,<span class="st">'20700040907'</span>,<span class="st">'20700040202'</span>,<span class="st">'20700030704'</span>,<span class="st">'20700041008'</span>,<span class="st">'20700041008'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041004'</span>,<span class="st">'20700041006'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700040202'</span>,<span class="st">'20700040203'</span>,<span class="st">'20700040201'</span>,<span class="st">'20700040202'</span>,<span class="st">'20700040201'</span></span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>))</span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>d2P <span class="ot">&lt;-</span> d <span class="sc">|&gt;</span> </span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(huc12 <span class="sc">%in%</span> <span class="fu">as.numeric</span>((<span class="fu">c</span>(potomacHUCs))))</span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>d2WideP <span class="ot">&lt;-</span> d2P <span class="sc">|&gt;</span> </span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(ver, featureid, huc12, mean_jul_temp, mean_aug_temp, mean_summer_temp, mean_max_temp) <span class="sc">|&gt;</span> </span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> ver, <span class="at">values_from =</span> <span class="fu">c</span>(mean_jul_temp, mean_aug_temp, mean_summer_temp, mean_max_temp))</span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(<span class="at">x =</span> d2WideP, <span class="at">file =</span> <span class="st">'./data/d2WideP.RData'</span>)</span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a><span class="co"># C:\Users\bletcher\OneDrive - DOI\projects\temperatureModelVersionComparison\data\in\sheds-temp-model-v1.4.0-20240116/db-locations</span></span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a><span class="co"># search for USGS_NEVERSINK</span></span>
+<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a>neversinkHUCs <span class="ot">&lt;-</span> <span class="fu">unique</span>(<span class="fu">c</span>(</span>
+<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a><span class="st">"20401040303"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040303"</span></span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a>))</span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a>d2N <span class="ot">&lt;-</span> d <span class="sc">|&gt;</span> </span>
-<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(huc12 <span class="sc">%in%</span> <span class="fu">as.numeric</span>((neversinkHUCs)))</span>
-<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a>d2WideN <span class="ot">&lt;-</span> d2N <span class="sc">|&gt;</span> </span>
-<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(ver, featureid, huc12, mean_jul_temp, mean_aug_temp, mean_summer_temp, mean_max_temp) <span class="sc">|&gt;</span> </span>
-<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> ver, <span class="at">values_from =</span> <span class="fu">c</span>(mean_jul_temp, mean_aug_temp, mean_summer_temp, mean_max_temp))</span>
-<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(<span class="at">x =</span> d2WideN, <span class="at">file =</span> <span class="st">'./data/d2WideN.RData'</span>)</span>
-<span id="cb5-74"><a href="#cb5-74" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a>d2N <span class="ot">&lt;-</span> d <span class="sc">|&gt;</span> </span>
+<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(huc12 <span class="sc">%in%</span> <span class="fu">as.numeric</span>((neversinkHUCs)))</span>
+<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a>d2WideN <span class="ot">&lt;-</span> d2N <span class="sc">|&gt;</span> </span>
+<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(ver, featureid, huc12, mean_jul_temp, mean_aug_temp, mean_summer_temp, mean_max_temp) <span class="sc">|&gt;</span> </span>
+<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> ver, <span class="at">values_from =</span> <span class="fu">c</span>(mean_jul_temp, mean_aug_temp, mean_summer_temp, mean_max_temp))</span>
+<span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(<span class="at">x =</span> d2WideN, <span class="at">file =</span> <span class="st">'./data/d2WideN.RData'</span>)</span>
+<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

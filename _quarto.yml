@@ -17,9 +17,9 @@ book:
   date: today
   chapters:
     - index.qmd
-    - part: "Compare versions"
+    - tempCompMain.qmd
+    - part: "Two watersheds"
       chapters:
-        - tempCompMain.qmd
         - potomac.qmd
         - neversink.qmd
 

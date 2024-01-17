@@ -1,4 +1,4 @@
-Libraries
+
 ```{r}
 #| label: libraries
 #| 
@@ -7,20 +7,21 @@ library(tidyverse)
 ```
 
 
-## Load data
+## Get data
 ```{r}
 #| label: loadData
 
-d13 <- read.csv('C:/Users/bletcher/OneDrive - DOI/projects/temperatureModelVersionComparison/data/in/sheds-temp-model-v1.4.0-20231208/sheds-temp-model-v1.3.0.csv')
+d13 <- read.csv('C:/Users/bletcher/OneDrive - DOI/projects/temperatureModelVersionComparison/data/in/sheds-temp-model-v1.3.0-20240116/sheds-temp-model-v1.3.0.csv')
 
 
-d14 <- read.csv('C:/Users/bletcher/OneDrive - DOI/projects/temperatureModelVersionComparison/data/in/sheds-temp-model-v1.4.0-20231208/sheds-temp-model-v1.4.0.csv')
+d14 <- read.csv('C:/Users/bletcher/OneDrive - DOI/projects/temperatureModelVersionComparison/data/in/sheds-temp-model-v1.4.0-20240116/sheds-temp-model-v1.4.0.csv')
 
-catchHucs <- read.csv('C:/Users/bletcher/OneDrive - DOI/projects/temperatureModelVersionComparison/data/in/sheds-temp-model-v1.4.0-20231208/catchments-hucs.csv')
+catchHucs <- read.csv('C:/Users/bletcher/OneDrive - DOI/projects/temperatureModelVersionComparison/data/in/sheds-temp-model-v1.4.0-20240116/catchments-hucs.csv')
 
 
 ```
 
+### Combine versions  
 ```{r}
 #| label: combineData 
 #| 
@@ -31,6 +32,7 @@ d <- bind_rows(d13, d14) |>
   left_join(catchHucs, by = c("featureid" = "catchment_id"))
 ```
 
+### Filter and widen
 ```{r}
 #| label: filterAndWide
 
