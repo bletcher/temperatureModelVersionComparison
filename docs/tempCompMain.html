@@ -189,8 +189,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#combine-versions" id="toc-combine-versions" class="nav-link active" data-scroll-target="#combine-versions"><span class="header-section-number">1.0.1</span> Combine versions</a></li>
-  <li><a href="#filter-and-widen" id="toc-filter-and-widen" class="nav-link" data-scroll-target="#filter-and-widen"><span class="header-section-number">1.0.2</span> Filter and widen</a></li>
+  <li><a href="#combine-versions" id="toc-combine-versions" class="nav-link active" data-scroll-target="#combine-versions"><span class="header-section-number">1.1</span> Combine versions</a></li>
+  <li><a href="#filter-and-widen" id="toc-filter-and-widen" class="nav-link" data-scroll-target="#filter-and-widen"><span class="header-section-number">1.2</span> Filter and widen</a></li>
   </ul>
 </nav>
     </div>
@@ -232,8 +232,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>catchHucs <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'C:/Users/bletcher/OneDrive - DOI/projects/temperatureModelVersionComparison/data/in/sheds-temp-model-v1.4.0-20240116/catchments-hucs.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<section id="combine-versions" class="level3" data-number="1.0.1">
-<h3 data-number="1.0.1" class="anchored" data-anchor-id="combine-versions"><span class="header-section-number">1.0.1</span> Combine versions</h3>
+<section id="combine-versions" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="combine-versions"><span class="header-section-number">1.1</span> Combine versions</h2>
 <div class="cell" data-hash="tempCompMain_cache/html/combineData_670f9fdef36dc1d2e593b713700a5e51">
 <details>
 <summary>Code</summary>
@@ -245,8 +245,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="filter-and-widen" class="level3" data-number="1.0.2">
-<h3 data-number="1.0.2" class="anchored" data-anchor-id="filter-and-widen"><span class="header-section-number">1.0.2</span> Filter and widen</h3>
+<section id="filter-and-widen" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="filter-and-widen"><span class="header-section-number">1.2</span> Filter and widen</h2>
 <div class="cell" data-hash="tempCompMain_cache/html/filterAndWide_51b0ef7280f612dfc6509a1ac3b4f1f9">
 <details>
 <summary>Code</summary>
@@ -707,7 +707,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Get data</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="fu"># Get data</span></span>
 <span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: loadData</span></span>
 <span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
@@ -721,7 +721,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="fu">### Combine versions  </span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="fu">## Combine versions  </span></span>
 <span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: combineData </span></span>
 <span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a><span class="co">#| </span></span>
@@ -732,7 +732,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(catchHucs, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"featureid"</span> <span class="ot">=</span> <span class="st">"catchment_id"</span>))</span>
 <span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a><span class="fu">### Filter and widen</span></span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a><span class="fu">## Filter and widen</span></span>
 <span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: filterAndWide</span></span>
 <span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a></span>

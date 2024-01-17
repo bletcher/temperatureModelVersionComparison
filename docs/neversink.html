@@ -188,9 +188,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#mean-august-temperature" id="toc-mean-august-temperature" class="nav-link active" data-scroll-target="#mean-august-temperature"><span class="header-section-number">3.1</span> Mean August temperature</a></li>
-  <li><a href="#mean-summer-temperature" id="toc-mean-summer-temperature" class="nav-link" data-scroll-target="#mean-summer-temperature"><span class="header-section-number">3.2</span> Mean Summer temperature</a></li>
-  <li><a href="#mean-maximum-temperature" id="toc-mean-maximum-temperature" class="nav-link" data-scroll-target="#mean-maximum-temperature"><span class="header-section-number">3.3</span> Mean maximum temperature</a></li>
+  <li><a href="#mean-july-temperature" id="toc-mean-july-temperature" class="nav-link active" data-scroll-target="#mean-july-temperature"><span class="header-section-number">3.1</span> Mean July temperature</a></li>
+  <li><a href="#mean-august-temperature" id="toc-mean-august-temperature" class="nav-link" data-scroll-target="#mean-august-temperature"><span class="header-section-number">3.2</span> Mean August temperature</a></li>
+  <li><a href="#mean-summer-temperature" id="toc-mean-summer-temperature" class="nav-link" data-scroll-target="#mean-summer-temperature"><span class="header-section-number">3.3</span> Mean Summer temperature</a></li>
+  <li><a href="#mean-maximum-temperature" id="toc-mean-maximum-temperature" class="nav-link" data-scroll-target="#mean-maximum-temperature"><span class="header-section-number">3.4</span> Mean maximum temperature</a></li>
   </ul>
 </nav>
     </div>
@@ -246,8 +247,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p>Plot version 3 (x-axis) against version 4 (y-axis) for several summer temperature variables.<br>
-## Mean July temperature</p>
+<p>Plot version 3 (x-axis) against version 4 (y-axis) for several summer temperature variables.</p>
+<section id="mean-july-temperature" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="mean-july-temperature"><span class="header-section-number">3.1</span> Mean July temperature</h2>
 <div class="cell" data-hash="neversink_cache/html/julyN_39aa20e44df8cdad010460bbae945b6b">
 <details>
 <summary>Code</summary>
@@ -264,8 +266,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="neversink_files/figure-html/julyN-2.png" class="img-fluid" width="768"></p>
 </div>
 </div>
-<section id="mean-august-temperature" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="mean-august-temperature"><span class="header-section-number">3.1</span> Mean August temperature</h2>
+</section>
+<section id="mean-august-temperature" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="mean-august-temperature"><span class="header-section-number">3.2</span> Mean August temperature</h2>
 <div class="cell" data-hash="neversink_cache/html/augN_ca9389993e091555417a2620a5ebab40">
 <details>
 <summary>Code</summary>
@@ -283,8 +286,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="mean-summer-temperature" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="mean-summer-temperature"><span class="header-section-number">3.2</span> Mean Summer temperature</h2>
+<section id="mean-summer-temperature" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="mean-summer-temperature"><span class="header-section-number">3.3</span> Mean Summer temperature</h2>
 <div class="cell" data-hash="neversink_cache/html/summerN_b513eb744b93ca68682949bc0d521a28">
 <details>
 <summary>Code</summary>
@@ -302,8 +305,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="mean-maximum-temperature" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="mean-maximum-temperature"><span class="header-section-number">3.3</span> Mean maximum temperature</h2>
+<section id="mean-maximum-temperature" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="mean-maximum-temperature"><span class="header-section-number">3.4</span> Mean maximum temperature</h2>
 <div class="cell" data-hash="neversink_cache/html/maxN_a4c1f6862e0c363a418dbd03bf41ef81">
 <details>
 <summary>Code</summary>
@@ -770,45 +773,46 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a><span class="fu"># Neversink  </span></span>
 <span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a>Plot version 3 (x-axis) against version 4 (y-axis) for several summer temperature variables.  </span>
-<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a><span class="fu">## Mean July temperature</span></span>
-<span id="cb11-43"><a href="#cb11-43" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb11-44"><a href="#cb11-44" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: julyN</span></span>
-<span id="cb11-45"><a href="#cb11-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-46"><a href="#cb11-46" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2WideN, <span class="st">"mean_jul_temp_3"</span>, <span class="st">"mean_jul_temp_4"</span>)</span>
-<span id="cb11-47"><a href="#cb11-47" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2WideN, <span class="st">"mean_jul_temp_3"</span>, <span class="st">"mean_jul_temp_4"</span>)</span>
-<span id="cb11-48"><a href="#cb11-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a><span class="fu">## Mean July temperature</span></span>
+<span id="cb11-44"><a href="#cb11-44" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb11-45"><a href="#cb11-45" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: julyN</span></span>
+<span id="cb11-46"><a href="#cb11-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-47"><a href="#cb11-47" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2WideN, <span class="st">"mean_jul_temp_3"</span>, <span class="st">"mean_jul_temp_4"</span>)</span>
+<span id="cb11-48"><a href="#cb11-48" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2WideN, <span class="st">"mean_jul_temp_3"</span>, <span class="st">"mean_jul_temp_4"</span>)</span>
 <span id="cb11-49"><a href="#cb11-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-50"><a href="#cb11-50" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-51"><a href="#cb11-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-52"><a href="#cb11-52" aria-hidden="true" tabindex="-1"></a><span class="fu">## Mean August temperature</span></span>
-<span id="cb11-55"><a href="#cb11-55" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb11-56"><a href="#cb11-56" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: augN</span></span>
-<span id="cb11-57"><a href="#cb11-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-58"><a href="#cb11-58" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2WideN, <span class="st">"mean_aug_temp_3"</span>, <span class="st">"mean_aug_temp_4"</span>)</span>
-<span id="cb11-59"><a href="#cb11-59" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2WideN, <span class="st">"mean_aug_temp_3"</span>, <span class="st">"mean_aug_temp_4"</span>)</span>
-<span id="cb11-60"><a href="#cb11-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-50"><a href="#cb11-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-51"><a href="#cb11-51" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-52"><a href="#cb11-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-53"><a href="#cb11-53" aria-hidden="true" tabindex="-1"></a><span class="fu">## Mean August temperature</span></span>
+<span id="cb11-56"><a href="#cb11-56" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb11-57"><a href="#cb11-57" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: augN</span></span>
+<span id="cb11-58"><a href="#cb11-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-59"><a href="#cb11-59" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2WideN, <span class="st">"mean_aug_temp_3"</span>, <span class="st">"mean_aug_temp_4"</span>)</span>
+<span id="cb11-60"><a href="#cb11-60" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2WideN, <span class="st">"mean_aug_temp_3"</span>, <span class="st">"mean_aug_temp_4"</span>)</span>
 <span id="cb11-61"><a href="#cb11-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-62"><a href="#cb11-62" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-63"><a href="#cb11-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-64"><a href="#cb11-64" aria-hidden="true" tabindex="-1"></a><span class="fu">## Mean Summer temperature</span></span>
-<span id="cb11-67"><a href="#cb11-67" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb11-68"><a href="#cb11-68" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: summerN</span></span>
-<span id="cb11-69"><a href="#cb11-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-70"><a href="#cb11-70" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2WideN, <span class="st">"mean_summer_temp_3"</span>, <span class="st">"mean_summer_temp_4"</span>)</span>
-<span id="cb11-71"><a href="#cb11-71" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2WideN, <span class="st">"mean_summer_temp_3"</span>, <span class="st">"mean_summer_temp_4"</span>)</span>
-<span id="cb11-72"><a href="#cb11-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-62"><a href="#cb11-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-63"><a href="#cb11-63" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-64"><a href="#cb11-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-65"><a href="#cb11-65" aria-hidden="true" tabindex="-1"></a><span class="fu">## Mean Summer temperature</span></span>
+<span id="cb11-68"><a href="#cb11-68" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb11-69"><a href="#cb11-69" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: summerN</span></span>
+<span id="cb11-70"><a href="#cb11-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-71"><a href="#cb11-71" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2WideN, <span class="st">"mean_summer_temp_3"</span>, <span class="st">"mean_summer_temp_4"</span>)</span>
+<span id="cb11-72"><a href="#cb11-72" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2WideN, <span class="st">"mean_summer_temp_3"</span>, <span class="st">"mean_summer_temp_4"</span>)</span>
 <span id="cb11-73"><a href="#cb11-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-74"><a href="#cb11-74" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-75"><a href="#cb11-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-76"><a href="#cb11-76" aria-hidden="true" tabindex="-1"></a><span class="fu">## Mean maximum temperature</span></span>
-<span id="cb11-79"><a href="#cb11-79" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb11-80"><a href="#cb11-80" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: maxN</span></span>
-<span id="cb11-81"><a href="#cb11-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-82"><a href="#cb11-82" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2WideN, <span class="st">"mean_max_temp_3"</span>, <span class="st">"mean_max_temp_4"</span>)</span>
-<span id="cb11-83"><a href="#cb11-83" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2WideN, <span class="st">"mean_max_temp_3"</span>, <span class="st">"mean_max_temp_4"</span>)</span>
-<span id="cb11-84"><a href="#cb11-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-74"><a href="#cb11-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-75"><a href="#cb11-75" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-76"><a href="#cb11-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-77"><a href="#cb11-77" aria-hidden="true" tabindex="-1"></a><span class="fu">## Mean maximum temperature</span></span>
+<span id="cb11-80"><a href="#cb11-80" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb11-81"><a href="#cb11-81" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: maxN</span></span>
+<span id="cb11-82"><a href="#cb11-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-83"><a href="#cb11-83" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2WideN, <span class="st">"mean_max_temp_3"</span>, <span class="st">"mean_max_temp_4"</span>)</span>
+<span id="cb11-84"><a href="#cb11-84" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2WideN, <span class="st">"mean_max_temp_3"</span>, <span class="st">"mean_max_temp_4"</span>)</span>
 <span id="cb11-85"><a href="#cb11-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-86"><a href="#cb11-86" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-86"><a href="#cb11-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-87"><a href="#cb11-87" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

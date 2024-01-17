@@ -34,6 +34,7 @@ plotByHUC <- function(d,x,y) {
 
 # Neversink  
 Plot version 3 (x-axis) against version 4 (y-axis) for several summer temperature variables.  
+
 ## Mean July temperature
 ```{r}
 #| label: julyN
