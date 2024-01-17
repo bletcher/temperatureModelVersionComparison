@@ -1,0 +1,74 @@
+
+```{r}
+#| label: libraries
+#| 
+library(getPrepareWBData) # for theme_publication()
+library(tidyverse)
+
+load(file = './data/d2WideP.RData')
+```
+
+Plot functions
+```{r}
+#| label: plotFunctions
+
+plotAll <- function(d,x,y) {
+  ggplot(d, aes(get(x), get(y), color = factor(huc12))) +
+    geom_point() +
+    geom_abline(intercept = 0, slope = 1) +
+    labs(x = x, y = y) +
+    theme_publication()
+}
+
+plotByHUC <- function(d,x,y) {
+  ggplot(d, aes(get(x), get(y))) +
+    geom_point() +
+    geom_abline(intercept = 0, slope = 1) +
+    labs(x = x, y = y) +
+    theme_publication() +
+    facet_wrap(~huc12)
+}
+
+```
+
+# Potomac  
+Plot version 3 (x-axis) against version 4 (y-axis) for several summer temperature variables.  
+## Mean July temperature
+```{r}
+#| label: july
+
+plotAll(d2WideP, "mean_jul_temp_3", "mean_jul_temp_4")
+plotByHUC(d2WideP, "mean_jul_temp_3", "mean_jul_temp_4")
+
+
+```
+
+## Mean August temperature
+```{r}
+#| label: aug
+
+plotAll(d2WideP, "mean_aug_temp_3", "mean_aug_temp_4")
+plotByHUC(d2WideP, "mean_aug_temp_3", "mean_aug_temp_4")
+
+
+```
+
+## Mean Summer temperature
+```{r}
+#| label: summer
+
+plotAll(d2WideP, "mean_summer_temp_3", "mean_summer_temp_4")
+plotByHUC(d2WideP, "mean_summer_temp_3", "mean_summer_temp_4")
+
+
+```
+
+## Mean maximum temperature
+```{r}
+#| label: max
+
+plotAll(d2WideP, "mean_max_temp_3", "mean_max_temp_4")
+plotByHUC(d2WideP, "mean_max_temp_3", "mean_max_temp_4")
+
+
+```
