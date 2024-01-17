@@ -18,6 +18,9 @@ book:
   chapters:
     - index.qmd
     - tempCompMain.qmd
+    - part: "All catchments"
+      chapters:
+        - allCatchments.qmd
     - part: "Two watersheds"
       chapters:
         - potomac.qmd

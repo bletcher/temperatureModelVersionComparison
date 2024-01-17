@@ -1,0 +1,94 @@
+
+```{r}
+#| label: librariesAll
+#| 
+library(getPrepareWBData) # for theme_publication()
+library(tidyverse)
+
+load(file = './data/dWide.RData')
+```
+
+Plot functions
+```{r}
+#| label: plotFunctionsAll
+
+plotAll <- function(d,x,y,huc) {
+  ggplot(d, aes(get(x), get(y), color = factor(get(huc)))) +
+    geom_point(alpha = 0.1, show.legend = FALSE) +
+    geom_abline(intercept = 0, slope = 1) +
+    labs(x = x, y = y) +
+    theme_publication()
+}
+
+plotByHUC <- function(d,x,y,huc) {
+  ggplot(d, aes(get(x), get(y))) +
+    geom_point(alpha = 0.1) +
+    geom_abline(intercept = 0, slope = 1) +
+    labs(x = x, y = y) +
+    theme_publication() +
+    facet_wrap(~get(huc))
+}
+
+```
+
+# All rivers  
+Plot version 3 (x-axis) against version 4 (y-axis) for several summer temperature variables.  
+
+## Mean July temperature
+```{r}
+#| label: julyAll
+
+plotAll(dWide, "mean_jul_temp_3", "mean_jul_temp_4","huc6")
+plotByHUC(dWide, "mean_jul_temp_3", "mean_jul_temp_4", "huc6")
+
+
+```
+
+## Mean August temperature
+```{r}
+#| label: augAll
+
+plotAll(dWide, "mean_aug_temp_3", "mean_aug_temp_4","huc6")
+plotByHUC(dWide, "mean_aug_temp_3", "mean_aug_temp_4", "huc6")
+
+```
+
+## Mean Summer temperature  
+### HUC6
+```{r}
+#| label: summer6All
+
+plotAll(dWide, "mean_summer_temp_3", "mean_summer_temp_4","huc6")
+plotByHUC(dWide, "mean_summer_temp_3", "mean_summer_temp_4", "huc6")
+
+```
+
+### HUC8
+```{r}
+#| label: summer8All
+
+plotAll(dWide, "mean_summer_temp_3", "mean_summer_temp_4","huc8")
+plotByHUC(dWide, "mean_summer_temp_3", "mean_summer_temp_4", "huc8")
+
+```
+
+### HUC10
+```{r}
+#| label: summer10All
+
+plotAll(dWide, "mean_summer_temp_3", "mean_summer_temp_4","huc10")
+plotByHUC(dWide, "mean_summer_temp_3", "mean_summer_temp_4", "huc10")
+
+```
+
+
+
+## Mean maximum temperature
+```{r}
+#| label: maxAll
+
+plotAll(dWide, "mean_max_temp_3", "mean_max_temp_4","huc6")
+plotByHUC(dWide, "mean_max_temp_3", "mean_max_temp_4", "huc6")
+
+
+```
