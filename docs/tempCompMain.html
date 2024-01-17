@@ -115,7 +115,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./tempCompMain.html">Comparison</a></li><li class="breadcrumb-item"><a href="./tempCompMain.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Load data</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./tempCompMain.html">Compare versions</a></li><li class="breadcrumb-item"><a href="./tempCompMain.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Load data</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -152,7 +152,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
- <span class="menu-text">Comparison</span></a>
+ <span class="menu-text">Compare versions</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -176,7 +176,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#potomac" id="toc-potomac" class="nav-link active" data-scroll-target="#potomac"><span class="header-section-number">1.1</span> Potomac</a></li>
+  <li><a href="#potomac" id="toc-potomac" class="nav-link active" data-scroll-target="#potomac"><span class="header-section-number">1.1</span> Potomac</a>
+  <ul class="collapse">
+  <li><a href="#mean-august-temperature" id="toc-mean-august-temperature" class="nav-link" data-scroll-target="#mean-august-temperature"><span class="header-section-number">1.1.1</span> Mean August temperature</a></li>
+  <li><a href="#mean-summer-temperature" id="toc-mean-summer-temperature" class="nav-link" data-scroll-target="#mean-summer-temperature"><span class="header-section-number">1.1.2</span> Mean Summer temperature</a></li>
+  <li><a href="#mean-maximum-temperature" id="toc-mean-maximum-temperature" class="nav-link" data-scroll-target="#mean-maximum-temperature"><span class="header-section-number">1.1.3</span> Mean maximum temperature</a></li>
+  </ul></li>
+  <li><a href="#neversink" id="toc-neversink" class="nav-link" data-scroll-target="#neversink"><span class="header-section-number">1.2</span> Neversink</a>
+  <ul class="collapse">
+  <li><a href="#mean-august-temperature-1" id="toc-mean-august-temperature-1" class="nav-link" data-scroll-target="#mean-august-temperature-1"><span class="header-section-number">1.2.1</span> Mean August temperature</a></li>
+  <li><a href="#mean-summer-temperature-1" id="toc-mean-summer-temperature-1" class="nav-link" data-scroll-target="#mean-summer-temperature-1"><span class="header-section-number">1.2.2</span> Mean Summer temperature</a></li>
+  <li><a href="#mean-maximum-temperature-1" id="toc-mean-maximum-temperature-1" class="nav-link" data-scroll-target="#mean-maximum-temperature-1"><span class="header-section-number">1.2.3</span> Mean maximum temperature</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -229,7 +240,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(catchHucs, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"featureid"</span> <span class="ot">=</span> <span class="st">"catchment_id"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div class="cell" data-hash="tempCompMain_cache/html/filterAndWide_5a82e1c68340ea196d4ed96a9b46919e">
+<div class="cell" data-hash="tempCompMain_cache/html/filterAndWide_7526362582f6cc0634c08713833b09d4">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>potomacHUCs <span class="ot">&lt;-</span> <span class="fu">unique</span>(<span class="fu">c</span>(<span class="st">'20700041009'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041004'</span>,<span class="st">'20700040202'</span>,<span class="st">'20700040203'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041005'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041004'</span>,<span class="st">'20700041004'</span>,<span class="st">'20700040205'</span>,<span class="st">'20700040202'</span>,<span class="st">'20700040201'</span>,<span class="st">'20700070301'</span>,<span class="st">'20700070203'</span>,<span class="st">'20700030706'</span>,<span class="st">'20700040908'</span>,<span class="st">'20700040908'</span>,<span class="st">'20700041106'</span>,<span class="st">'20700041106'</span>,<span class="st">'20700040904'</span>,<span class="st">'20700040904'</span>,<span class="st">'20700040903'</span>,<span class="st">'20700040404'</span>,<span class="st">'20700040907'</span>,<span class="st">'20700040202'</span>,<span class="st">'20700030704'</span>,<span class="st">'20700070301'</span>,<span class="st">'20700070302'</span>,<span class="st">'20700070303'</span>,<span class="st">'20700070202'</span>,<span class="st">'20700040906'</span>,<span class="st">'20700040407'</span>,<span class="st">'20700040906'</span>,<span class="st">'20700041107'</span>,<span class="st">'20700041104'</span>,<span class="st">'20700040204'</span>,<span class="st">'20700041105'</span>,<span class="st">'20700040907'</span>,<span class="st">'20700040202'</span>,<span class="st">'20700030704'</span>,<span class="st">'20700041008'</span>,<span class="st">'20700041008'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041004'</span>,<span class="st">'20700041006'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700040202'</span>,<span class="st">'20700040203'</span>,<span class="st">'20700040201'</span>,<span class="st">'20700040202'</span>,<span class="st">'20700040201'</span></span>
@@ -243,120 +254,203 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>() <span class="sc">|&gt;</span> </span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> ver, <span class="at">values_from =</span> <span class="fu">c</span>(mean_jul_temp, mean_aug_temp, mean_summer_temp, mean_max_temp))</span>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>neversinkHUCs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'202980087'</span>, <span class="st">'202973988'</span>, <span class="st">'202974513'</span>, <span class="st">'202974973'</span>, <span class="st">'202976522'</span>)</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="dv">12152</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 12152</code></pre>
-</div>
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>d2N <span class="ot">&lt;-</span> d <span class="sc">|&gt;</span> </span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(huc12 <span class="sc">%in%</span> <span class="fu">as.numeric</span>((<span class="fu">c</span>(neversinkHUCs))))</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>d2WideN <span class="ot">&lt;-</span> d2N <span class="sc">|&gt;</span> </span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(ver, featureid, huc12, mean_jul_temp, mean_aug_temp, mean_summer_temp, mean_max_temp) <span class="sc">|&gt;</span> </span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> ver, <span class="at">values_from =</span> <span class="fu">c</span>(mean_jul_temp, mean_aug_temp, mean_summer_temp, mean_max_temp))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co"># C:\Users\bletcher\OneDrive - DOI\projects\temperatureModelVersionComparison\data\in\sheds-temp-model-v1.4.0-20240116/db-locations</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co"># search for USGS_NEVERSINK</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>neversinkHUCs <span class="ot">&lt;-</span> <span class="fu">unique</span>(<span class="fu">c</span>(</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="st">"20401040303"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040303"</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>))</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>d2N <span class="ot">&lt;-</span> d <span class="sc">|&gt;</span> </span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(huc12 <span class="sc">%in%</span> <span class="fu">as.numeric</span>((neversinkHUCs)))</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>d2WideN <span class="ot">&lt;-</span> d2N <span class="sc">|&gt;</span> </span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(ver, featureid, huc12, mean_jul_temp, mean_aug_temp, mean_summer_temp, mean_max_temp) <span class="sc">|&gt;</span> </span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> ver, <span class="at">values_from =</span> <span class="fu">c</span>(mean_jul_temp, mean_aug_temp, mean_summer_temp, mean_max_temp))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>Plot functions</p>
 <div class="cell" data-hash="tempCompMain_cache/html/plotFunctions_ae2e33117f39cc9af413c67228a0ed33">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>plotAll <span class="ot">&lt;-</span> <span class="cf">function</span>(d,x,y) {</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(d, <span class="fu">aes</span>(<span class="fu">get</span>(x), <span class="fu">get</span>(y), <span class="at">color =</span> <span class="fu">factor</span>(huc12))) <span class="sc">+</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="dv">0</span>, <span class="at">slope =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> x, <span class="at">y =</span> y) <span class="sc">+</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_publication</span>()</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>plotByHUC <span class="ot">&lt;-</span> <span class="cf">function</span>(d,x,y) {</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(d, <span class="fu">aes</span>(<span class="fu">get</span>(x), <span class="fu">get</span>(y))) <span class="sc">+</span></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="dv">0</span>, <span class="at">slope =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> x, <span class="at">y =</span> y) <span class="sc">+</span></span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_publication</span>() <span class="sc">+</span></span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">facet_wrap</span>(<span class="sc">~</span>huc12)</span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>plotAll <span class="ot">&lt;-</span> <span class="cf">function</span>(d,x,y) {</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(d, <span class="fu">aes</span>(<span class="fu">get</span>(x), <span class="fu">get</span>(y), <span class="at">color =</span> <span class="fu">factor</span>(huc12))) <span class="sc">+</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="dv">0</span>, <span class="at">slope =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> x, <span class="at">y =</span> y) <span class="sc">+</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_publication</span>()</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>plotByHUC <span class="ot">&lt;-</span> <span class="cf">function</span>(d,x,y) {</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(d, <span class="fu">aes</span>(<span class="fu">get</span>(x), <span class="fu">get</span>(y))) <span class="sc">+</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="dv">0</span>, <span class="at">slope =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> x, <span class="at">y =</span> y) <span class="sc">+</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_publication</span>() <span class="sc">+</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">facet_wrap</span>(<span class="sc">~</span>huc12)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <section id="potomac" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="potomac"><span class="header-section-number">1.1</span> Potomac</h2>
-<p>Mean July temperature</p>
+<p>Plot version 3 (x-axis) against version 4 (y-axis) for several summer temperature variables.<br>
+### Mean July temperature</p>
 <div class="cell" data-hash="tempCompMain_cache/html/july_54e2f045ceebc859f42f7ee4f59c7530">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2WideP, <span class="st">"mean_jul_temp_3"</span>, <span class="st">"mean_jul_temp_4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2WideP, <span class="st">"mean_jul_temp_3"</span>, <span class="st">"mean_jul_temp_4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <p><img src="tempCompMain_files/figure-html/july-1.png" class="img-fluid" width="768"></p>
 </div>
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2WideP, <span class="st">"mean_jul_temp_3"</span>, <span class="st">"mean_jul_temp_4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2WideP, <span class="st">"mean_jul_temp_3"</span>, <span class="st">"mean_jul_temp_4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <p><img src="tempCompMain_files/figure-html/july-2.png" class="img-fluid" width="768"></p>
 </div>
 </div>
-<p>Mean August temperature</p>
+<section id="mean-august-temperature" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="mean-august-temperature"><span class="header-section-number">1.1.1</span> Mean August temperature</h3>
 <div class="cell" data-hash="tempCompMain_cache/html/aug_af40df3fc304e5c55c234ceaf7b994ef">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2WideP, <span class="st">"mean_aug_temp_3"</span>, <span class="st">"mean_aug_temp_4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2WideP, <span class="st">"mean_aug_temp_3"</span>, <span class="st">"mean_aug_temp_4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <p><img src="tempCompMain_files/figure-html/aug-1.png" class="img-fluid" width="768"></p>
 </div>
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2WideP, <span class="st">"mean_aug_temp_3"</span>, <span class="st">"mean_aug_temp_4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2WideP, <span class="st">"mean_aug_temp_3"</span>, <span class="st">"mean_aug_temp_4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <p><img src="tempCompMain_files/figure-html/aug-2.png" class="img-fluid" width="768"></p>
 </div>
 </div>
-<p>Mean Summer temperature</p>
+</section>
+<section id="mean-summer-temperature" class="level3" data-number="1.1.2">
+<h3 data-number="1.1.2" class="anchored" data-anchor-id="mean-summer-temperature"><span class="header-section-number">1.1.2</span> Mean Summer temperature</h3>
 <div class="cell" data-hash="tempCompMain_cache/html/summer_ba66a9f14338edd75096b33f06cae302">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2WideP, <span class="st">"mean_summer_temp_3"</span>, <span class="st">"mean_summer_temp_4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2WideP, <span class="st">"mean_summer_temp_3"</span>, <span class="st">"mean_summer_temp_4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <p><img src="tempCompMain_files/figure-html/summer-1.png" class="img-fluid" width="768"></p>
 </div>
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2WideP, <span class="st">"mean_summer_temp_3"</span>, <span class="st">"mean_summer_temp_4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2WideP, <span class="st">"mean_summer_temp_3"</span>, <span class="st">"mean_summer_temp_4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <p><img src="tempCompMain_files/figure-html/summer-2.png" class="img-fluid" width="768"></p>
 </div>
 </div>
-<p>Mean maximum temperature</p>
+</section>
+<section id="mean-maximum-temperature" class="level3" data-number="1.1.3">
+<h3 data-number="1.1.3" class="anchored" data-anchor-id="mean-maximum-temperature"><span class="header-section-number">1.1.3</span> Mean maximum temperature</h3>
 <div class="cell" data-hash="tempCompMain_cache/html/max_44ed56efd2d454b333d031504e79c00a">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2WideP, <span class="st">"mean_max_temp_3"</span>, <span class="st">"mean_max_temp_4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2WideP, <span class="st">"mean_max_temp_3"</span>, <span class="st">"mean_max_temp_4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <p><img src="tempCompMain_files/figure-html/max-1.png" class="img-fluid" width="768"></p>
 </div>
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2WideP, <span class="st">"mean_max_temp_3"</span>, <span class="st">"mean_max_temp_4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2WideP, <span class="st">"mean_max_temp_3"</span>, <span class="st">"mean_max_temp_4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <p><img src="tempCompMain_files/figure-html/max-2.png" class="img-fluid" width="768"></p>
+</div>
+</div>
+</section>
+</section>
+<section id="neversink" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="neversink"><span class="header-section-number">1.2</span> Neversink</h2>
+<p>Plot version 3 (x-axis) against version 4 (y-axis) for several summer temperature variables.<br>
+### Mean July temperature</p>
+<div class="cell" data-hash="tempCompMain_cache/html/julyN_cc850815ca11f40532a027d004f22fe5">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2WideN, <span class="st">"mean_jul_temp_3"</span>, <span class="st">"mean_jul_temp_4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="tempCompMain_files/figure-html/julyN-1.png" class="img-fluid" width="768"></p>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2WideN, <span class="st">"mean_jul_temp_3"</span>, <span class="st">"mean_jul_temp_4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="tempCompMain_files/figure-html/julyN-2.png" class="img-fluid" width="768"></p>
+</div>
+</div>
+<section id="mean-august-temperature-1" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="mean-august-temperature-1"><span class="header-section-number">1.2.1</span> Mean August temperature</h3>
+<div class="cell" data-hash="tempCompMain_cache/html/augN_8885fabf9662709f3055c23f2a8b850b">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2WideN, <span class="st">"mean_aug_temp_3"</span>, <span class="st">"mean_aug_temp_4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="tempCompMain_files/figure-html/augN-1.png" class="img-fluid" width="768"></p>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2WideN, <span class="st">"mean_aug_temp_3"</span>, <span class="st">"mean_aug_temp_4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="tempCompMain_files/figure-html/augN-2.png" class="img-fluid" width="768"></p>
+</div>
+</div>
+</section>
+<section id="mean-summer-temperature-1" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="mean-summer-temperature-1"><span class="header-section-number">1.2.2</span> Mean Summer temperature</h3>
+<div class="cell" data-hash="tempCompMain_cache/html/summerN_8f5a412622a7f84b1062bdbf39438d5f">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2WideN, <span class="st">"mean_summer_temp_3"</span>, <span class="st">"mean_summer_temp_4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="tempCompMain_files/figure-html/summerN-1.png" class="img-fluid" width="768"></p>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2WideN, <span class="st">"mean_summer_temp_3"</span>, <span class="st">"mean_summer_temp_4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="tempCompMain_files/figure-html/summerN-2.png" class="img-fluid" width="768"></p>
+</div>
+</div>
+</section>
+<section id="mean-maximum-temperature-1" class="level3" data-number="1.2.3">
+<h3 data-number="1.2.3" class="anchored" data-anchor-id="mean-maximum-temperature-1"><span class="header-section-number">1.2.3</span> Mean maximum temperature</h3>
+<div class="cell" data-hash="tempCompMain_cache/html/maxN_e592dee2cc89f540ac61b20dd1f772f1">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2WideN, <span class="st">"mean_max_temp_3"</span>, <span class="st">"mean_max_temp_4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="tempCompMain_files/figure-html/maxN-1.png" class="img-fluid" width="768"></p>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2WideN, <span class="st">"mean_max_temp_3"</span>, <span class="st">"mean_max_temp_4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="tempCompMain_files/figure-html/maxN-2.png" class="img-fluid" width="768"></p>
 </div>
 </div>
 
 
 <!-- -->
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -768,131 +862,175 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   <div class="nav-page nav-page-next">
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb16" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>Libraries</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: libraries</span></span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="co">#| </span></span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(getPrepareWBData) <span class="co"># for theme_publication()</span></span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="fu">## Load data</span></span>
-<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: loadData</span></span>
-<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>d13 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'C:/Users/bletcher/OneDrive - DOI/projects/temperatureModelVersionComparison/data/in/sheds-temp-model-v1.4.0-20231208/sheds-temp-model-v1.3.0.csv'</span>)</span>
-<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>d14 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'C:/Users/bletcher/OneDrive - DOI/projects/temperatureModelVersionComparison/data/in/sheds-temp-model-v1.4.0-20231208/sheds-temp-model-v1.4.0.csv'</span>)</span>
-<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>catchHucs <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'C:/Users/bletcher/OneDrive - DOI/projects/temperatureModelVersionComparison/data/in/sheds-temp-model-v1.4.0-20231208/catchments-hucs.csv'</span>)</span>
-<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: combineData </span></span>
-<span id="cb16-32"><a href="#cb16-32" aria-hidden="true" tabindex="-1"></a><span class="co">#| </span></span>
-<span id="cb16-33"><a href="#cb16-33" aria-hidden="true" tabindex="-1"></a>d13 <span class="ot">&lt;-</span> d13 <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">ver =</span> <span class="dv">3</span>)</span>
-<span id="cb16-34"><a href="#cb16-34" aria-hidden="true" tabindex="-1"></a>d14 <span class="ot">&lt;-</span> d14 <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">ver =</span> <span class="dv">4</span>)</span>
-<span id="cb16-35"><a href="#cb16-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-36"><a href="#cb16-36" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(d13, d14) <span class="sc">|&gt;</span> </span>
-<span id="cb16-37"><a href="#cb16-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(catchHucs, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"featureid"</span> <span class="ot">=</span> <span class="st">"catchment_id"</span>))</span>
-<span id="cb16-38"><a href="#cb16-38" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb16-39"><a href="#cb16-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-42"><a href="#cb16-42" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb16-43"><a href="#cb16-43" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: filterAndWide</span></span>
-<span id="cb16-44"><a href="#cb16-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-45"><a href="#cb16-45" aria-hidden="true" tabindex="-1"></a>potomacHUCs <span class="ot">&lt;-</span> <span class="fu">unique</span>(<span class="fu">c</span>(<span class="st">'20700041009'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041004'</span>,<span class="st">'20700040202'</span>,<span class="st">'20700040203'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041005'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041004'</span>,<span class="st">'20700041004'</span>,<span class="st">'20700040205'</span>,<span class="st">'20700040202'</span>,<span class="st">'20700040201'</span>,<span class="st">'20700070301'</span>,<span class="st">'20700070203'</span>,<span class="st">'20700030706'</span>,<span class="st">'20700040908'</span>,<span class="st">'20700040908'</span>,<span class="st">'20700041106'</span>,<span class="st">'20700041106'</span>,<span class="st">'20700040904'</span>,<span class="st">'20700040904'</span>,<span class="st">'20700040903'</span>,<span class="st">'20700040404'</span>,<span class="st">'20700040907'</span>,<span class="st">'20700040202'</span>,<span class="st">'20700030704'</span>,<span class="st">'20700070301'</span>,<span class="st">'20700070302'</span>,<span class="st">'20700070303'</span>,<span class="st">'20700070202'</span>,<span class="st">'20700040906'</span>,<span class="st">'20700040407'</span>,<span class="st">'20700040906'</span>,<span class="st">'20700041107'</span>,<span class="st">'20700041104'</span>,<span class="st">'20700040204'</span>,<span class="st">'20700041105'</span>,<span class="st">'20700040907'</span>,<span class="st">'20700040202'</span>,<span class="st">'20700030704'</span>,<span class="st">'20700041008'</span>,<span class="st">'20700041008'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041004'</span>,<span class="st">'20700041006'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700040202'</span>,<span class="st">'20700040203'</span>,<span class="st">'20700040201'</span>,<span class="st">'20700040202'</span>,<span class="st">'20700040201'</span></span>
-<span id="cb16-46"><a href="#cb16-46" aria-hidden="true" tabindex="-1"></a>))</span>
-<span id="cb16-47"><a href="#cb16-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-48"><a href="#cb16-48" aria-hidden="true" tabindex="-1"></a>d2P <span class="ot">&lt;-</span> d <span class="sc">|&gt;</span> </span>
-<span id="cb16-49"><a href="#cb16-49" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(huc12 <span class="sc">%in%</span> <span class="fu">as.numeric</span>((<span class="fu">c</span>(potomacHUCs))))</span>
-<span id="cb16-50"><a href="#cb16-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-51"><a href="#cb16-51" aria-hidden="true" tabindex="-1"></a>d2WideP <span class="ot">&lt;-</span> d2P <span class="sc">|&gt;</span> </span>
-<span id="cb16-52"><a href="#cb16-52" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(ver, featureid, huc12, mean_jul_temp, mean_aug_temp, mean_summer_temp, mean_max_temp) <span class="sc">|&gt;</span> </span>
-<span id="cb16-53"><a href="#cb16-53" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb16-54"><a href="#cb16-54" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> ver, <span class="at">values_from =</span> <span class="fu">c</span>(mean_jul_temp, mean_aug_temp, mean_summer_temp, mean_max_temp))</span>
-<span id="cb16-55"><a href="#cb16-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-56"><a href="#cb16-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-57"><a href="#cb16-57" aria-hidden="true" tabindex="-1"></a>neversinkHUCs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'202980087'</span>, <span class="st">'202973988'</span>, <span class="st">'202974513'</span>, <span class="st">'202974973'</span>, <span class="st">'202976522'</span>)</span>
-<span id="cb16-58"><a href="#cb16-58" aria-hidden="true" tabindex="-1"></a><span class="dv">12152</span></span>
-<span id="cb16-59"><a href="#cb16-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-60"><a href="#cb16-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-61"><a href="#cb16-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-62"><a href="#cb16-62" aria-hidden="true" tabindex="-1"></a>d2N <span class="ot">&lt;-</span> d <span class="sc">|&gt;</span> </span>
-<span id="cb16-63"><a href="#cb16-63" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(huc12 <span class="sc">%in%</span> <span class="fu">as.numeric</span>((<span class="fu">c</span>(neversinkHUCs))))</span>
-<span id="cb16-64"><a href="#cb16-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-65"><a href="#cb16-65" aria-hidden="true" tabindex="-1"></a>d2WideN <span class="ot">&lt;-</span> d2N <span class="sc">|&gt;</span> </span>
-<span id="cb16-66"><a href="#cb16-66" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(ver, featureid, huc12, mean_jul_temp, mean_aug_temp, mean_summer_temp, mean_max_temp) <span class="sc">|&gt;</span> </span>
-<span id="cb16-67"><a href="#cb16-67" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb16-68"><a href="#cb16-68" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> ver, <span class="at">values_from =</span> <span class="fu">c</span>(mean_jul_temp, mean_aug_temp, mean_summer_temp, mean_max_temp))</span>
-<span id="cb16-69"><a href="#cb16-69" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb16-70"><a href="#cb16-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-71"><a href="#cb16-71" aria-hidden="true" tabindex="-1"></a>Plot functions</span>
-<span id="cb16-74"><a href="#cb16-74" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb16-75"><a href="#cb16-75" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: plotFunctions</span></span>
-<span id="cb16-76"><a href="#cb16-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-77"><a href="#cb16-77" aria-hidden="true" tabindex="-1"></a>plotAll <span class="ot">&lt;-</span> <span class="cf">function</span>(d,x,y) {</span>
-<span id="cb16-78"><a href="#cb16-78" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(d, <span class="fu">aes</span>(<span class="fu">get</span>(x), <span class="fu">get</span>(y), <span class="at">color =</span> <span class="fu">factor</span>(huc12))) <span class="sc">+</span></span>
-<span id="cb16-79"><a href="#cb16-79" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb16-80"><a href="#cb16-80" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="dv">0</span>, <span class="at">slope =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb16-81"><a href="#cb16-81" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> x, <span class="at">y =</span> y) <span class="sc">+</span></span>
-<span id="cb16-82"><a href="#cb16-82" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_publication</span>()</span>
-<span id="cb16-83"><a href="#cb16-83" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb16-84"><a href="#cb16-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-85"><a href="#cb16-85" aria-hidden="true" tabindex="-1"></a>plotByHUC <span class="ot">&lt;-</span> <span class="cf">function</span>(d,x,y) {</span>
-<span id="cb16-86"><a href="#cb16-86" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(d, <span class="fu">aes</span>(<span class="fu">get</span>(x), <span class="fu">get</span>(y))) <span class="sc">+</span></span>
-<span id="cb16-87"><a href="#cb16-87" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb16-88"><a href="#cb16-88" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="dv">0</span>, <span class="at">slope =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb16-89"><a href="#cb16-89" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> x, <span class="at">y =</span> y) <span class="sc">+</span></span>
-<span id="cb16-90"><a href="#cb16-90" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_publication</span>() <span class="sc">+</span></span>
-<span id="cb16-91"><a href="#cb16-91" aria-hidden="true" tabindex="-1"></a>    <span class="fu">facet_wrap</span>(<span class="sc">~</span>huc12)</span>
-<span id="cb16-92"><a href="#cb16-92" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb16-93"><a href="#cb16-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-94"><a href="#cb16-94" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb16-95"><a href="#cb16-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-96"><a href="#cb16-96" aria-hidden="true" tabindex="-1"></a><span class="fu">## Potomac  </span></span>
-<span id="cb16-97"><a href="#cb16-97" aria-hidden="true" tabindex="-1"></a>Mean July temperature</span>
-<span id="cb16-100"><a href="#cb16-100" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb16-101"><a href="#cb16-101" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: july</span></span>
-<span id="cb16-102"><a href="#cb16-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-103"><a href="#cb16-103" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2WideP, <span class="st">"mean_jul_temp_3"</span>, <span class="st">"mean_jul_temp_4"</span>)</span>
-<span id="cb16-104"><a href="#cb16-104" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2WideP, <span class="st">"mean_jul_temp_3"</span>, <span class="st">"mean_jul_temp_4"</span>)</span>
-<span id="cb16-105"><a href="#cb16-105" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-106"><a href="#cb16-106" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-107"><a href="#cb16-107" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb16-108"><a href="#cb16-108" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-109"><a href="#cb16-109" aria-hidden="true" tabindex="-1"></a>Mean August temperature</span>
-<span id="cb16-112"><a href="#cb16-112" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb16-113"><a href="#cb16-113" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: aug</span></span>
-<span id="cb16-114"><a href="#cb16-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-115"><a href="#cb16-115" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2WideP, <span class="st">"mean_aug_temp_3"</span>, <span class="st">"mean_aug_temp_4"</span>)</span>
-<span id="cb16-116"><a href="#cb16-116" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2WideP, <span class="st">"mean_aug_temp_3"</span>, <span class="st">"mean_aug_temp_4"</span>)</span>
-<span id="cb16-117"><a href="#cb16-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-118"><a href="#cb16-118" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-119"><a href="#cb16-119" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb16-120"><a href="#cb16-120" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-121"><a href="#cb16-121" aria-hidden="true" tabindex="-1"></a>Mean Summer temperature</span>
-<span id="cb16-124"><a href="#cb16-124" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb16-125"><a href="#cb16-125" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: summer</span></span>
-<span id="cb16-126"><a href="#cb16-126" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-127"><a href="#cb16-127" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2WideP, <span class="st">"mean_summer_temp_3"</span>, <span class="st">"mean_summer_temp_4"</span>)</span>
-<span id="cb16-128"><a href="#cb16-128" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2WideP, <span class="st">"mean_summer_temp_3"</span>, <span class="st">"mean_summer_temp_4"</span>)</span>
-<span id="cb16-129"><a href="#cb16-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-130"><a href="#cb16-130" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-131"><a href="#cb16-131" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb16-132"><a href="#cb16-132" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-133"><a href="#cb16-133" aria-hidden="true" tabindex="-1"></a>Mean maximum temperature</span>
-<span id="cb16-136"><a href="#cb16-136" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb16-137"><a href="#cb16-137" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: max</span></span>
-<span id="cb16-138"><a href="#cb16-138" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-139"><a href="#cb16-139" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2WideP, <span class="st">"mean_max_temp_3"</span>, <span class="st">"mean_max_temp_4"</span>)</span>
-<span id="cb16-140"><a href="#cb16-140" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2WideP, <span class="st">"mean_max_temp_3"</span>, <span class="st">"mean_max_temp_4"</span>)</span>
-<span id="cb16-141"><a href="#cb16-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-142"><a href="#cb16-142" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-143"><a href="#cb16-143" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<div class="sourceCode" id="cb22" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>Libraries</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: libraries</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="co">#| </span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(getPrepareWBData) <span class="co"># for theme_publication()</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a><span class="fu">## Load data</span></span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: loadData</span></span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a>d13 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'C:/Users/bletcher/OneDrive - DOI/projects/temperatureModelVersionComparison/data/in/sheds-temp-model-v1.4.0-20231208/sheds-temp-model-v1.3.0.csv'</span>)</span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a>d14 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'C:/Users/bletcher/OneDrive - DOI/projects/temperatureModelVersionComparison/data/in/sheds-temp-model-v1.4.0-20231208/sheds-temp-model-v1.4.0.csv'</span>)</span>
+<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a>catchHucs <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'C:/Users/bletcher/OneDrive - DOI/projects/temperatureModelVersionComparison/data/in/sheds-temp-model-v1.4.0-20231208/catchments-hucs.csv'</span>)</span>
+<span id="cb22-24"><a href="#cb22-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-26"><a href="#cb22-26" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-27"><a href="#cb22-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-30"><a href="#cb22-30" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb22-31"><a href="#cb22-31" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: combineData </span></span>
+<span id="cb22-32"><a href="#cb22-32" aria-hidden="true" tabindex="-1"></a><span class="co">#| </span></span>
+<span id="cb22-33"><a href="#cb22-33" aria-hidden="true" tabindex="-1"></a>d13 <span class="ot">&lt;-</span> d13 <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">ver =</span> <span class="dv">3</span>)</span>
+<span id="cb22-34"><a href="#cb22-34" aria-hidden="true" tabindex="-1"></a>d14 <span class="ot">&lt;-</span> d14 <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">ver =</span> <span class="dv">4</span>)</span>
+<span id="cb22-35"><a href="#cb22-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-36"><a href="#cb22-36" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(d13, d14) <span class="sc">|&gt;</span> </span>
+<span id="cb22-37"><a href="#cb22-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(catchHucs, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"featureid"</span> <span class="ot">=</span> <span class="st">"catchment_id"</span>))</span>
+<span id="cb22-38"><a href="#cb22-38" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-39"><a href="#cb22-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-42"><a href="#cb22-42" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb22-43"><a href="#cb22-43" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: filterAndWide</span></span>
+<span id="cb22-44"><a href="#cb22-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-45"><a href="#cb22-45" aria-hidden="true" tabindex="-1"></a>potomacHUCs <span class="ot">&lt;-</span> <span class="fu">unique</span>(<span class="fu">c</span>(<span class="st">'20700041009'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041004'</span>,<span class="st">'20700040202'</span>,<span class="st">'20700040203'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041005'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041004'</span>,<span class="st">'20700041004'</span>,<span class="st">'20700040205'</span>,<span class="st">'20700040202'</span>,<span class="st">'20700040201'</span>,<span class="st">'20700070301'</span>,<span class="st">'20700070203'</span>,<span class="st">'20700030706'</span>,<span class="st">'20700040908'</span>,<span class="st">'20700040908'</span>,<span class="st">'20700041106'</span>,<span class="st">'20700041106'</span>,<span class="st">'20700040904'</span>,<span class="st">'20700040904'</span>,<span class="st">'20700040903'</span>,<span class="st">'20700040404'</span>,<span class="st">'20700040907'</span>,<span class="st">'20700040202'</span>,<span class="st">'20700030704'</span>,<span class="st">'20700070301'</span>,<span class="st">'20700070302'</span>,<span class="st">'20700070303'</span>,<span class="st">'20700070202'</span>,<span class="st">'20700040906'</span>,<span class="st">'20700040407'</span>,<span class="st">'20700040906'</span>,<span class="st">'20700041107'</span>,<span class="st">'20700041104'</span>,<span class="st">'20700040204'</span>,<span class="st">'20700041105'</span>,<span class="st">'20700040907'</span>,<span class="st">'20700040202'</span>,<span class="st">'20700030704'</span>,<span class="st">'20700041008'</span>,<span class="st">'20700041008'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700041004'</span>,<span class="st">'20700041006'</span>,<span class="st">'20700041009'</span>,<span class="st">'20700041007'</span>,<span class="st">'20700040202'</span>,<span class="st">'20700040203'</span>,<span class="st">'20700040201'</span>,<span class="st">'20700040202'</span>,<span class="st">'20700040201'</span></span>
+<span id="cb22-46"><a href="#cb22-46" aria-hidden="true" tabindex="-1"></a>))</span>
+<span id="cb22-47"><a href="#cb22-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-48"><a href="#cb22-48" aria-hidden="true" tabindex="-1"></a>d2P <span class="ot">&lt;-</span> d <span class="sc">|&gt;</span> </span>
+<span id="cb22-49"><a href="#cb22-49" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(huc12 <span class="sc">%in%</span> <span class="fu">as.numeric</span>((<span class="fu">c</span>(potomacHUCs))))</span>
+<span id="cb22-50"><a href="#cb22-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-51"><a href="#cb22-51" aria-hidden="true" tabindex="-1"></a>d2WideP <span class="ot">&lt;-</span> d2P <span class="sc">|&gt;</span> </span>
+<span id="cb22-52"><a href="#cb22-52" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(ver, featureid, huc12, mean_jul_temp, mean_aug_temp, mean_summer_temp, mean_max_temp) <span class="sc">|&gt;</span> </span>
+<span id="cb22-53"><a href="#cb22-53" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb22-54"><a href="#cb22-54" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> ver, <span class="at">values_from =</span> <span class="fu">c</span>(mean_jul_temp, mean_aug_temp, mean_summer_temp, mean_max_temp))</span>
+<span id="cb22-55"><a href="#cb22-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-56"><a href="#cb22-56" aria-hidden="true" tabindex="-1"></a><span class="co"># C:\Users\bletcher\OneDrive - DOI\projects\temperatureModelVersionComparison\data\in\sheds-temp-model-v1.4.0-20240116/db-locations</span></span>
+<span id="cb22-57"><a href="#cb22-57" aria-hidden="true" tabindex="-1"></a><span class="co"># search for USGS_NEVERSINK</span></span>
+<span id="cb22-58"><a href="#cb22-58" aria-hidden="true" tabindex="-1"></a>neversinkHUCs <span class="ot">&lt;-</span> <span class="fu">unique</span>(<span class="fu">c</span>(</span>
+<span id="cb22-59"><a href="#cb22-59" aria-hidden="true" tabindex="-1"></a><span class="st">"20401040303"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040301"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040302"</span>, <span class="st">"20401040303"</span></span>
+<span id="cb22-60"><a href="#cb22-60" aria-hidden="true" tabindex="-1"></a>))</span>
+<span id="cb22-61"><a href="#cb22-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-62"><a href="#cb22-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-63"><a href="#cb22-63" aria-hidden="true" tabindex="-1"></a>d2N <span class="ot">&lt;-</span> d <span class="sc">|&gt;</span> </span>
+<span id="cb22-64"><a href="#cb22-64" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(huc12 <span class="sc">%in%</span> <span class="fu">as.numeric</span>((neversinkHUCs)))</span>
+<span id="cb22-65"><a href="#cb22-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-66"><a href="#cb22-66" aria-hidden="true" tabindex="-1"></a>d2WideN <span class="ot">&lt;-</span> d2N <span class="sc">|&gt;</span> </span>
+<span id="cb22-67"><a href="#cb22-67" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(ver, featureid, huc12, mean_jul_temp, mean_aug_temp, mean_summer_temp, mean_max_temp) <span class="sc">|&gt;</span> </span>
+<span id="cb22-68"><a href="#cb22-68" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb22-69"><a href="#cb22-69" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> ver, <span class="at">values_from =</span> <span class="fu">c</span>(mean_jul_temp, mean_aug_temp, mean_summer_temp, mean_max_temp))</span>
+<span id="cb22-70"><a href="#cb22-70" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-71"><a href="#cb22-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-72"><a href="#cb22-72" aria-hidden="true" tabindex="-1"></a>Plot functions</span>
+<span id="cb22-75"><a href="#cb22-75" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb22-76"><a href="#cb22-76" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: plotFunctions</span></span>
+<span id="cb22-77"><a href="#cb22-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-78"><a href="#cb22-78" aria-hidden="true" tabindex="-1"></a>plotAll <span class="ot">&lt;-</span> <span class="cf">function</span>(d,x,y) {</span>
+<span id="cb22-79"><a href="#cb22-79" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(d, <span class="fu">aes</span>(<span class="fu">get</span>(x), <span class="fu">get</span>(y), <span class="at">color =</span> <span class="fu">factor</span>(huc12))) <span class="sc">+</span></span>
+<span id="cb22-80"><a href="#cb22-80" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb22-81"><a href="#cb22-81" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="dv">0</span>, <span class="at">slope =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb22-82"><a href="#cb22-82" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> x, <span class="at">y =</span> y) <span class="sc">+</span></span>
+<span id="cb22-83"><a href="#cb22-83" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_publication</span>()</span>
+<span id="cb22-84"><a href="#cb22-84" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb22-85"><a href="#cb22-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-86"><a href="#cb22-86" aria-hidden="true" tabindex="-1"></a>plotByHUC <span class="ot">&lt;-</span> <span class="cf">function</span>(d,x,y) {</span>
+<span id="cb22-87"><a href="#cb22-87" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(d, <span class="fu">aes</span>(<span class="fu">get</span>(x), <span class="fu">get</span>(y))) <span class="sc">+</span></span>
+<span id="cb22-88"><a href="#cb22-88" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb22-89"><a href="#cb22-89" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="dv">0</span>, <span class="at">slope =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb22-90"><a href="#cb22-90" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> x, <span class="at">y =</span> y) <span class="sc">+</span></span>
+<span id="cb22-91"><a href="#cb22-91" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_publication</span>() <span class="sc">+</span></span>
+<span id="cb22-92"><a href="#cb22-92" aria-hidden="true" tabindex="-1"></a>    <span class="fu">facet_wrap</span>(<span class="sc">~</span>huc12)</span>
+<span id="cb22-93"><a href="#cb22-93" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb22-94"><a href="#cb22-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-95"><a href="#cb22-95" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-96"><a href="#cb22-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-97"><a href="#cb22-97" aria-hidden="true" tabindex="-1"></a><span class="fu">## Potomac  </span></span>
+<span id="cb22-98"><a href="#cb22-98" aria-hidden="true" tabindex="-1"></a>Plot version 3 (x-axis) against version 4 (y-axis) for several summer temperature variables.  </span>
+<span id="cb22-99"><a href="#cb22-99" aria-hidden="true" tabindex="-1"></a><span class="fu">### Mean July temperature</span></span>
+<span id="cb22-102"><a href="#cb22-102" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb22-103"><a href="#cb22-103" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: july</span></span>
+<span id="cb22-104"><a href="#cb22-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-105"><a href="#cb22-105" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2WideP, <span class="st">"mean_jul_temp_3"</span>, <span class="st">"mean_jul_temp_4"</span>)</span>
+<span id="cb22-106"><a href="#cb22-106" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2WideP, <span class="st">"mean_jul_temp_3"</span>, <span class="st">"mean_jul_temp_4"</span>)</span>
+<span id="cb22-107"><a href="#cb22-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-108"><a href="#cb22-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-109"><a href="#cb22-109" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-110"><a href="#cb22-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-111"><a href="#cb22-111" aria-hidden="true" tabindex="-1"></a><span class="fu">### Mean August temperature</span></span>
+<span id="cb22-114"><a href="#cb22-114" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb22-115"><a href="#cb22-115" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: aug</span></span>
+<span id="cb22-116"><a href="#cb22-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-117"><a href="#cb22-117" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2WideP, <span class="st">"mean_aug_temp_3"</span>, <span class="st">"mean_aug_temp_4"</span>)</span>
+<span id="cb22-118"><a href="#cb22-118" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2WideP, <span class="st">"mean_aug_temp_3"</span>, <span class="st">"mean_aug_temp_4"</span>)</span>
+<span id="cb22-119"><a href="#cb22-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-120"><a href="#cb22-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-121"><a href="#cb22-121" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-122"><a href="#cb22-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-123"><a href="#cb22-123" aria-hidden="true" tabindex="-1"></a><span class="fu">### Mean Summer temperature</span></span>
+<span id="cb22-126"><a href="#cb22-126" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb22-127"><a href="#cb22-127" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: summer</span></span>
+<span id="cb22-128"><a href="#cb22-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-129"><a href="#cb22-129" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2WideP, <span class="st">"mean_summer_temp_3"</span>, <span class="st">"mean_summer_temp_4"</span>)</span>
+<span id="cb22-130"><a href="#cb22-130" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2WideP, <span class="st">"mean_summer_temp_3"</span>, <span class="st">"mean_summer_temp_4"</span>)</span>
+<span id="cb22-131"><a href="#cb22-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-132"><a href="#cb22-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-133"><a href="#cb22-133" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-134"><a href="#cb22-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-135"><a href="#cb22-135" aria-hidden="true" tabindex="-1"></a><span class="fu">### Mean maximum temperature</span></span>
+<span id="cb22-138"><a href="#cb22-138" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb22-139"><a href="#cb22-139" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: max</span></span>
+<span id="cb22-140"><a href="#cb22-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-141"><a href="#cb22-141" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2WideP, <span class="st">"mean_max_temp_3"</span>, <span class="st">"mean_max_temp_4"</span>)</span>
+<span id="cb22-142"><a href="#cb22-142" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2WideP, <span class="st">"mean_max_temp_3"</span>, <span class="st">"mean_max_temp_4"</span>)</span>
+<span id="cb22-143"><a href="#cb22-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-144"><a href="#cb22-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-145"><a href="#cb22-145" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-146"><a href="#cb22-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-147"><a href="#cb22-147" aria-hidden="true" tabindex="-1"></a><span class="fu">## Neversink  </span></span>
+<span id="cb22-148"><a href="#cb22-148" aria-hidden="true" tabindex="-1"></a>Plot version 3 (x-axis) against version 4 (y-axis) for several summer temperature variables.  </span>
+<span id="cb22-149"><a href="#cb22-149" aria-hidden="true" tabindex="-1"></a><span class="fu">### Mean July temperature</span></span>
+<span id="cb22-152"><a href="#cb22-152" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb22-153"><a href="#cb22-153" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: julyN</span></span>
+<span id="cb22-154"><a href="#cb22-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-155"><a href="#cb22-155" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2WideN, <span class="st">"mean_jul_temp_3"</span>, <span class="st">"mean_jul_temp_4"</span>)</span>
+<span id="cb22-156"><a href="#cb22-156" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2WideN, <span class="st">"mean_jul_temp_3"</span>, <span class="st">"mean_jul_temp_4"</span>)</span>
+<span id="cb22-157"><a href="#cb22-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-158"><a href="#cb22-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-159"><a href="#cb22-159" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-160"><a href="#cb22-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-161"><a href="#cb22-161" aria-hidden="true" tabindex="-1"></a><span class="fu">### Mean August temperature</span></span>
+<span id="cb22-164"><a href="#cb22-164" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb22-165"><a href="#cb22-165" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: augN</span></span>
+<span id="cb22-166"><a href="#cb22-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-167"><a href="#cb22-167" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2WideN, <span class="st">"mean_aug_temp_3"</span>, <span class="st">"mean_aug_temp_4"</span>)</span>
+<span id="cb22-168"><a href="#cb22-168" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2WideN, <span class="st">"mean_aug_temp_3"</span>, <span class="st">"mean_aug_temp_4"</span>)</span>
+<span id="cb22-169"><a href="#cb22-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-170"><a href="#cb22-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-171"><a href="#cb22-171" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-172"><a href="#cb22-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-173"><a href="#cb22-173" aria-hidden="true" tabindex="-1"></a><span class="fu">### Mean Summer temperature</span></span>
+<span id="cb22-176"><a href="#cb22-176" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb22-177"><a href="#cb22-177" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: summerN</span></span>
+<span id="cb22-178"><a href="#cb22-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-179"><a href="#cb22-179" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2WideN, <span class="st">"mean_summer_temp_3"</span>, <span class="st">"mean_summer_temp_4"</span>)</span>
+<span id="cb22-180"><a href="#cb22-180" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2WideN, <span class="st">"mean_summer_temp_3"</span>, <span class="st">"mean_summer_temp_4"</span>)</span>
+<span id="cb22-181"><a href="#cb22-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-182"><a href="#cb22-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-183"><a href="#cb22-183" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-184"><a href="#cb22-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-185"><a href="#cb22-185" aria-hidden="true" tabindex="-1"></a><span class="fu">### Mean maximum temperature</span></span>
+<span id="cb22-188"><a href="#cb22-188" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb22-189"><a href="#cb22-189" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: maxN</span></span>
+<span id="cb22-190"><a href="#cb22-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-191"><a href="#cb22-191" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAll</span>(d2WideN, <span class="st">"mean_max_temp_3"</span>, <span class="st">"mean_max_temp_4"</span>)</span>
+<span id="cb22-192"><a href="#cb22-192" aria-hidden="true" tabindex="-1"></a><span class="fu">plotByHUC</span>(d2WideN, <span class="st">"mean_max_temp_3"</span>, <span class="st">"mean_max_temp_4"</span>)</span>
+<span id="cb22-193"><a href="#cb22-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-194"><a href="#cb22-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-195"><a href="#cb22-195" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

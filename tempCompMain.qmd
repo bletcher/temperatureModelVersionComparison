@@ -46,14 +46,15 @@ d2WideP <- d2P |>
   distinct() |> 
   pivot_wider(names_from = ver, values_from = c(mean_jul_temp, mean_aug_temp, mean_summer_temp, mean_max_temp))
 
-
-neversinkHUCs <- c('202980087', '202973988', '202974513', '202974973', '202976522')
-12152
-
+# C:\Users\bletcher\OneDrive - DOI\projects\temperatureModelVersionComparison\data\in\sheds-temp-model-v1.4.0-20240116/db-locations
+# search for USGS_NEVERSINK
+neversinkHUCs <- unique(c(
+"20401040303", "20401040301", "20401040301", "20401040302", "20401040302", "20401040302", "20401040302", "20401040302", "20401040301", "20401040302", "20401040302", "20401040301", "20401040302", "20401040302", "20401040302", "20401040301", "20401040302", "20401040302", "20401040301", "20401040301", "20401040302", "20401040302", "20401040301", "20401040302", "20401040302", "20401040302", "20401040301", "20401040301", "20401040301", "20401040301", "20401040302", "20401040302", "20401040301", "20401040301", "20401040301", "20401040301", "20401040301", "20401040301", "20401040301", "20401040301", "20401040301", "20401040301", "20401040301", "20401040301", "20401040301", "20401040301", "20401040301", "20401040301", "20401040301", "20401040302", "20401040302", "20401040303"
+))
 
 
 d2N <- d |> 
-  filter(huc12 %in% as.numeric((c(neversinkHUCs))))
+  filter(huc12 %in% as.numeric((neversinkHUCs)))
 
 d2WideN <- d2N |> 
   dplyr::select(ver, featureid, huc12, mean_jul_temp, mean_aug_temp, mean_summer_temp, mean_max_temp) |> 
@@ -85,7 +86,8 @@ plotByHUC <- function(d,x,y) {
 ```
 
 ## Potomac  
-Mean July temperature
+Plot version 3 (x-axis) against version 4 (y-axis) for several summer temperature variables.  
+### Mean July temperature
 ```{r}
 #| label: july
 
@@ -95,7 +97,7 @@ plotByHUC(d2WideP, "mean_jul_temp_3", "mean_jul_temp_4")
 
 ```
 
-Mean August temperature
+### Mean August temperature
 ```{r}
 #| label: aug
 
@@ -105,7 +107,7 @@ plotByHUC(d2WideP, "mean_aug_temp_3", "mean_aug_temp_4")
 
 ```
 
-Mean Summer temperature
+### Mean Summer temperature
 ```{r}
 #| label: summer
 
@@ -115,7 +117,7 @@ plotByHUC(d2WideP, "mean_summer_temp_3", "mean_summer_temp_4")
 
 ```
 
-Mean maximum temperature
+### Mean maximum temperature
 ```{r}
 #| label: max
 
@@ -124,3 +126,46 @@ plotByHUC(d2WideP, "mean_max_temp_3", "mean_max_temp_4")
 
 
 ```
+
+## Neversink  
+Plot version 3 (x-axis) against version 4 (y-axis) for several summer temperature variables.  
+### Mean July temperature
+```{r}
+#| label: julyN
+
+plotAll(d2WideN, "mean_jul_temp_3", "mean_jul_temp_4")
+plotByHUC(d2WideN, "mean_jul_temp_3", "mean_jul_temp_4")
+
+
+```
+
+### Mean August temperature
+```{r}
+#| label: augN
+
+plotAll(d2WideN, "mean_aug_temp_3", "mean_aug_temp_4")
+plotByHUC(d2WideN, "mean_aug_temp_3", "mean_aug_temp_4")
+
+
+```
+
+### Mean Summer temperature
+```{r}
+#| label: summerN
+
+plotAll(d2WideN, "mean_summer_temp_3", "mean_summer_temp_4")
+plotByHUC(d2WideN, "mean_summer_temp_3", "mean_summer_temp_4")
+
+
+```
+
+### Mean maximum temperature
+```{r}
+#| label: maxN
+
+plotAll(d2WideN, "mean_max_temp_3", "mean_max_temp_4")
+plotByHUC(d2WideN, "mean_max_temp_3", "mean_max_temp_4")
+
+
+```
+

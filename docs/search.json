@@ -11,6 +11,13 @@
     "href": "tempCompMain.html#potomac",
     "title": "1  Load data",
     "section": "1.1 Potomac",
-    "text": "1.1 Potomac\nMean July temperature\n\n\nCode\nplotAll(d2WideP, \"mean_jul_temp_3\", \"mean_jul_temp_4\")\n\n\n\n\n\nCode\nplotByHUC(d2WideP, \"mean_jul_temp_3\", \"mean_jul_temp_4\")\n\n\n\n\n\nMean August temperature\n\n\nCode\nplotAll(d2WideP, \"mean_aug_temp_3\", \"mean_aug_temp_4\")\n\n\n\n\n\nCode\nplotByHUC(d2WideP, \"mean_aug_temp_3\", \"mean_aug_temp_4\")\n\n\n\n\n\nMean Summer temperature\n\n\nCode\nplotAll(d2WideP, \"mean_summer_temp_3\", \"mean_summer_temp_4\")\n\n\n\n\n\nCode\nplotByHUC(d2WideP, \"mean_summer_temp_3\", \"mean_summer_temp_4\")\n\n\n\n\n\nMean maximum temperature\n\n\nCode\nplotAll(d2WideP, \"mean_max_temp_3\", \"mean_max_temp_4\")\n\n\n\n\n\nCode\nplotByHUC(d2WideP, \"mean_max_temp_3\", \"mean_max_temp_4\")"
+    "text": "1.1 Potomac\nPlot version 3 (x-axis) against version 4 (y-axis) for several summer temperature variables.\n### Mean July temperature\n\n\nCode\nplotAll(d2WideP, \"mean_jul_temp_3\", \"mean_jul_temp_4\")\n\n\n\n\n\nCode\nplotByHUC(d2WideP, \"mean_jul_temp_3\", \"mean_jul_temp_4\")\n\n\n\n\n\n\n1.1.1 Mean August temperature\n\n\nCode\nplotAll(d2WideP, \"mean_aug_temp_3\", \"mean_aug_temp_4\")\n\n\n\n\n\nCode\nplotByHUC(d2WideP, \"mean_aug_temp_3\", \"mean_aug_temp_4\")\n\n\n\n\n\n\n\n1.1.2 Mean Summer temperature\n\n\nCode\nplotAll(d2WideP, \"mean_summer_temp_3\", \"mean_summer_temp_4\")\n\n\n\n\n\nCode\nplotByHUC(d2WideP, \"mean_summer_temp_3\", \"mean_summer_temp_4\")\n\n\n\n\n\n\n\n1.1.3 Mean maximum temperature\n\n\nCode\nplotAll(d2WideP, \"mean_max_temp_3\", \"mean_max_temp_4\")\n\n\n\n\n\nCode\nplotByHUC(d2WideP, \"mean_max_temp_3\", \"mean_max_temp_4\")"
+  },
+  {
+    "objectID": "tempCompMain.html#neversink",
+    "href": "tempCompMain.html#neversink",
+    "title": "1  Load data",
+    "section": "1.2 Neversink",
+    "text": "1.2 Neversink\nPlot version 3 (x-axis) against version 4 (y-axis) for several summer temperature variables.\n### Mean July temperature\n\n\nCode\nplotAll(d2WideN, \"mean_jul_temp_3\", \"mean_jul_temp_4\")\n\n\n\n\n\nCode\nplotByHUC(d2WideN, \"mean_jul_temp_3\", \"mean_jul_temp_4\")\n\n\n\n\n\n\n1.2.1 Mean August temperature\n\n\nCode\nplotAll(d2WideN, \"mean_aug_temp_3\", \"mean_aug_temp_4\")\n\n\n\n\n\nCode\nplotByHUC(d2WideN, \"mean_aug_temp_3\", \"mean_aug_temp_4\")\n\n\n\n\n\n\n\n1.2.2 Mean Summer temperature\n\n\nCode\nplotAll(d2WideN, \"mean_summer_temp_3\", \"mean_summer_temp_4\")\n\n\n\n\n\nCode\nplotByHUC(d2WideN, \"mean_summer_temp_3\", \"mean_summer_temp_4\")\n\n\n\n\n\n\n\n1.2.3 Mean maximum temperature\n\n\nCode\nplotAll(d2WideN, \"mean_max_temp_3\", \"mean_max_temp_4\")\n\n\n\n\n\nCode\nplotByHUC(d2WideN, \"mean_max_temp_3\", \"mean_max_temp_4\")"
   }
 ]

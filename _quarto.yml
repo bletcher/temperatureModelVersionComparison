@@ -17,7 +17,7 @@ book:
   date: today
   chapters:
     - index.qmd
-    - part: "Comparison"
+    - part: "Compare versions"
       chapters:
         - tempCompMain.qmd
 
