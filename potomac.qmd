@@ -32,7 +32,7 @@ plotByHUC <- function(d,x,y) {
 ```
 
 # Potomac  
-Plot version 3 (x-axis) against version 4 (y-axis) for several summer temperature variables.  
+Plot version 3 (x-axis) against version 4 (y-axis) for several summer temperature variables. Colors represent different HUC12s in the single-panel graphs. HUC12s are plotted in each panel in the multi-panel graphs.    
 
 ## Mean July temperature
 ```{r}
