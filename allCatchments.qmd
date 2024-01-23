@@ -6,6 +6,7 @@ library(getPrepareWBData) # for theme_publication()
 library(tidyverse)
 
 load(file = './data/dWide.RData')
+load(file = './data/d.RData')
 ```
 
 Plot functions
@@ -32,7 +33,28 @@ plotByHUC <- function(d,x,y,huc) {
 ```
 
 # All rivers  
-Plot version 3 (x-axis) against version 4 (y-axis) for several summer temperature variables.  
+Plot version 3 (x-axis) against version 4 (y-axis) for several summer temperature variables. Colors represent different HUC12s in the single-panel graphs. HUC12s are plotted in each panel in the multi-panel graphs.  
+
+## Stats for each version - all HUCs  
+Summarize some basic stats for each model version
+```{r}
+#| label: versStat
+
+d |> 
+  group_by(ver) |> 
+  summarize(
+    meanSummer = mean(mean_summer_temp),
+    sdSummer = sd(mean_summer_temp),
+    mean_max_max = mean(max_max_temp),
+    sd_max_max = sd(max_max_temp),
+    mean_mean_max = mean(mean_max_temp),
+    sd_mean_max = sd(mean_max_temp)
+  )
+
+
+```
+
+
 
 ## Mean July temperature
 ```{r}
@@ -85,10 +107,20 @@ plotAll(dWide, "mean_summer_temp_3", "mean_summer_temp_4","huc10")
 
 ## Mean maximum temperature
 ```{r}
-#| label: maxAll
+#| label: meanMaxAll
 
 plotAll(dWide, "mean_max_temp_3", "mean_max_temp_4","huc6")
 plotByHUC(dWide, "mean_max_temp_3", "mean_max_temp_4", "huc6")
 
 
 ```
+
+## Maximum temperature
+```{r}
+#| label: maxAll
+
+plotAll(dWide, "max_max_temp_3", "max_max_temp_4","huc6")
+plotByHUC(dWide, "max_max_temp_3", "max_max_temp_4", "huc6")
+
+```
+

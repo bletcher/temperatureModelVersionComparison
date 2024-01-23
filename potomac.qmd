@@ -66,10 +66,20 @@ plotByHUC(d2WideP, "mean_summer_temp_3", "mean_summer_temp_4")
 
 ## Mean maximum temperature
 ```{r}
-#| label: max
+#| label: meanMaxP
 
 plotAll(d2WideP, "mean_max_temp_3", "mean_max_temp_4")
 plotByHUC(d2WideP, "mean_max_temp_3", "mean_max_temp_4")
 
 
 ```
+
+## Maximum temperature
+```{r}
+#| label: maxMaxP
+
+plotAll(d2WideP, "max_max_temp_3", "max_max_temp_4")
+plotByHUC(d2WideP, "max_max_temp_3", "max_max_temp_4")
+
+```
+

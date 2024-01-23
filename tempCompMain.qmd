@@ -31,23 +31,9 @@ d14 <- d14 |> mutate(ver = 4)
 
 d <- bind_rows(d13, d14) |> 
   left_join(catchHucs, by = c("featureid" = "catchment_id"))
+
+save(x = d, file = './data/d.RData')
 ```
-
-## Stats for each version - all HUCs  
-Summarize some basic stats for each model version
-```{r}
-#| label: versStat
-
-d |> 
-  group_by(ver) |> 
-  summarize(
-    meanSummer = mean(mean_summer_temp),
-    sdSummer = sd(mean_summer_temp)
-  )
-
-
-```
-
 
 
 ## Filter and widen
@@ -56,9 +42,9 @@ d |>
 
 
 dWide <- d |> 
-  dplyr::select(ver, featureid, huc12, mean_jul_temp, mean_aug_temp, mean_summer_temp, mean_max_temp) |> 
+  dplyr::select(ver, featureid, huc12, mean_jul_temp, mean_aug_temp, mean_summer_temp, mean_max_temp, max_max_temp) |> 
   distinct() |> 
-  pivot_wider(names_from = ver, values_from = c(mean_jul_temp, mean_aug_temp, mean_summer_temp, mean_max_temp)) |> 
+  pivot_wider(names_from = ver, values_from = c(mean_jul_temp, mean_aug_temp, mean_summer_temp, mean_max_temp, max_max_temp)) |> 
   mutate(
     huc6 = signif(huc12, 6-1),
     huc8 = signif(huc12, 8-1),
@@ -76,9 +62,9 @@ d2P <- d |>
   mutate(huc12_name = "Potomac")
 
 d2WideP <- d2P |> 
-  dplyr::select(ver, featureid, huc12, mean_jul_temp, mean_aug_temp, mean_summer_temp, mean_max_temp) |> 
+  dplyr::select(ver, featureid, huc12, mean_jul_temp, mean_aug_temp, mean_summer_temp, mean_max_temp, max_max_temp) |> 
   distinct() |> 
-  pivot_wider(names_from = ver, values_from = c(mean_jul_temp, mean_aug_temp, mean_summer_temp, mean_max_temp))
+  pivot_wider(names_from = ver, values_from = c(mean_jul_temp, mean_aug_temp, mean_summer_temp, mean_max_temp, max_max_temp))
 
 save(x = d2WideP, file = './data/d2WideP.RData')
 
@@ -95,9 +81,9 @@ d2N <- d |>
 
 
 d2WideN <- d2N |> 
-  dplyr::select(ver, featureid, huc12, mean_jul_temp, mean_aug_temp, mean_summer_temp, mean_max_temp) |> 
+  dplyr::select(ver, featureid, huc12, mean_jul_temp, mean_aug_temp, mean_summer_temp, mean_max_temp, max_max_temp) |> 
   distinct() |> 
-  pivot_wider(names_from = ver, values_from = c(mean_jul_temp, mean_aug_temp, mean_summer_temp, mean_max_temp))
+  pivot_wider(names_from = ver, values_from = c(mean_jul_temp, mean_aug_temp, mean_summer_temp, mean_max_temp, max_max_temp))
 
 save(x = d2WideN, file = './data/d2WideN.RData')
 ```
@@ -107,13 +93,15 @@ Summarize some basic stats for each model version
 ```{r}
 #| label: versStatPN
 
-
-
 bind_rows(d2P, d2N) |> 
   group_by(huc12_name, ver) |> 
   summarize(
-    meanSummer = mean(mean_summer_temp),
-    sdSummer = sd(mean_summer_temp)
+    mean_summer = mean(mean_summer_temp),
+    sd_summer = sd(mean_summer_temp),
+    mean_max_max = mean(max_max_temp),
+    sd_max_max = sd(max_max_temp),
+    mean_mean_max = mean(mean_max_temp),
+    sd_mean_max = sd(mean_max_temp)
   )
 
 
