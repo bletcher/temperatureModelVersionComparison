@@ -14,4 +14,6 @@ library(getWBData)
 # install.packages("xxxx", dependencies=TRUE, repos='http://cran.rstudio.com/')
 
 
-quarto::quarto_render(output_format = "html")
+quarto::quarto_render(output_format = "html"
+                    #  , cache_refresh=TRUE
+                      )

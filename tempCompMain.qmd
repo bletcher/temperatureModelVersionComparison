@@ -88,6 +88,27 @@ d2WideN <- d2N |>
 save(x = d2WideN, file = './data/d2WideN.RData')
 ```
 
+## Stats for each version - all HUCs  
+Summarize some basic stats for each model version
+```{r}
+#| label: versStat
+
+d |> 
+  group_by(ver) |> 
+  summarize(
+    meanSummer = mean(mean_summer_temp),
+    sdSummer = sd(mean_summer_temp),
+    mean_max_max = mean(max_max_temp),
+    sd_max_max = sd(max_max_temp),
+    mean_mean_max = mean(mean_max_temp),
+    sd_mean_max = sd(mean_max_temp)
+  )
+
+
+```
+
+
+
 ## Stats for each version - Potomac and Neversink  
 Summarize some basic stats for each model version
 ```{r}
@@ -98,10 +119,10 @@ bind_rows(d2P, d2N) |>
   summarize(
     mean_summer = mean(mean_summer_temp),
     sd_summer = sd(mean_summer_temp),
-    mean_max_max = mean(max_max_temp),
-    sd_max_max = sd(max_max_temp),
     mean_mean_max = mean(mean_max_temp),
-    sd_mean_max = sd(mean_max_temp)
+    sd_mean_max = sd(mean_max_temp),
+    mean_max_max = mean(max_max_temp),
+    sd_max_max = sd(max_max_temp)
   )
 
 
